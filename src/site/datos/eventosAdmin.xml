@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<!-- Evento Actual -->
+	<actual>2013/jornadaDeActualizacionEnOsteoporosis</actual>
+	
+	<!-- Eventos Proximos -->
+	<proximo>2013/jornadaDeActualizacionEnOsteoporosis</proximo>
+
+	<!-- Eventos Realizados -->
+	<realizado>2013/1erEncuentroNacionalDeEndocrinologosEnFormacion</realizado>
+	
+	<realizado>2012/2ndoEncuentroDeResidentesDelInteriorDelPais</realizado>
+	<realizado>2012/epidemiaDelSigloXXI</realizado>
+	<realizado>2012/1JornadaAcademicaDelConsejoDeOrientacionDeMedicina</realizado>
+	<realizado>2012/encuentroDeDiagnostcoPorImagenes</realizado>
+	<realizado>2012/jornadaDePracticaYmanejoDeMaterialCadaverico</realizado>
+	<realizado>2012/nuevosEnfoquesEnMedicinaInterna</realizado>
+	
+	<realizado>2011/apuntesInfectologicos</realizado>
+	<realizado>2011/patologiaRelacionadaALasAlteraciones</realizado>
+	<realizado>2011/jornadaDeActualizacionEnOrtopediayTraumatologia</realizado>
+	<realizado>2011/jornadaDeEmergentologiaPediatrica</realizado>
+		
+</data>

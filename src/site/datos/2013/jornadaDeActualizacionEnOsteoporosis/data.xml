@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Jornada de Actualización en Osteoporósis</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Jornada de Actualización en Osteoporósis</subTitulo>
+	
+	<dia>24</dia>
+	<diaNombre>Sábado</diaNombre>
+	<mes>Agosto</mes>
+	<ano>2013</ano>
+	
+	<lugar>Salón El Greco</lugar>
+	<lugarDireccion>Av. Rivadavia 5353 - C. A. Bs. As.</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=Sal%C3%B3n+El+Greco&amp;aq=&amp;sll=-34.593191,-58.417557&amp;sspn=0.007269,0.016512&amp;ie=UTF8&amp;hq=Sal%C3%B3n+El+Greco&amp;hnear=&amp;t=m&amp;cid=6455526517155667366&amp;ll=-34.608133,-58.439455&amp;spn=0.033909,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed</mapa>
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	
+	
+	<textoEvento><![CDATA[
+		<p><strong>Participar es muy simple</strong>, completá tus datos haciendo clic en el botón <strong>“INSCRIBITE”</strong>. Recibirás una confirmación.</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Directores" tamano="1_4" alto="70px">
+		<speaker>
+			<nombre>Dra. Magdalena Norma Guadagna</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Maria Ines Tamborenea</nombre>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Disertantes" tamano="1_4" alto="70px">
+		<speaker>
+			<nombre>Dra. Claudia Sedlinsky</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Susana Moggia</nombre>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Coordinadores" tamano="1_4">
+		<speaker>
+			<nombre>Dra. Maria S. Larroudé</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Laura Lapides</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Pablo Costanzo</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Débora Yankelevich</nombre>
+		</speaker>
+	</speakers>
+	
+	<agenda titulo="Agenda">
+		<item>
+			<hora>08:30 a 09:00 hs</hora>
+			<actividad>Acreditación</actividad>
+		</item>
+		<item>
+			<hora>09:00 a 09:15 hs</hora>
+			<actividad>Bienvenida al curso de actualización en osteoporosis</actividad>
+			<aclaracion>Dra. Magdalena Norma Guadagna</aclaracion>
+		</item>
+		<item>
+			<hora>09:15 a 09:30 hs</hora>
+			<actividad>Presentación de casos clínicos</actividad>
+		</item>
+		<item>
+			<hora>09:30 a 10:00 hs</hora>
+			<actividad>Generalidades del metabolismo mineral</actividad>
+			<aclaracion>Dra. Claudia Sedlinsky</aclaracion>
+		</item>
+		<item>
+			<hora>10:00 a 10:30 hs</hora>
+			<actividad>Diagnóstico en osteoporosis</actividad>
+			<aclaracion>Dra. Magdalena Norma Guadagna</aclaracion>
+		</item>
+		<item>
+			<hora>10:30 a 10:45 hs</hora>
+			<actividad>Discusión de casos clínicos</actividad>
+			<aclaracion>Coordinadores: Dra. María S. Larroudé - Dra. Laura Lapides</aclaracion>
+		</item>
+		<item>
+			<hora>10:45 a 11:15 hs</hora>
+			<actividad>Café</actividad>
+		</item>
+		<item>
+			<hora>11:15 a 11:30 hs</hora>
+			<actividad>Presentación de casos clínicos</actividad>
+		</item>
+		<item>
+			<hora>11:30 a 12:00 hs</hora>
+			<actividad>Factores de riesgo en osteoporosis</actividad>
+			<aclaracion>Dra. María Inés Tamborenea</aclaracion>
+		</item>
+		<item>
+			<hora>12:00 a 12:30 hs</hora>
+			<actividad>Avances en tratamiento de osteoporosis</actividad>
+			<aclaracion>Dra. Susana Moggia</aclaracion>
+		</item>
+		<item>
+			<hora>12:30 a 13:00 hs</hora>
+			<actividad>Discusión de casos clínicos</actividad>
+			<aclaracion>Coordinadores: Dr. Pablo Costanzo - Dra. Débora Yankelevich</aclaracion>
+		</item>
+		<item>
+			<hora>13:00 a 13:15 hs</hora>
+			<actividad>Cierre de la jornada</actividad>
+		</item>
+		<item>
+			<hora>13:15 hs</hora>
+			<actividad>Lunch</actividad>
+		</item>
+	</agenda>
+	
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se llevó a cabo con éxito en la Ciudad de Buenos Aires Jornada de Actualización en Osteoporósis, en el marco del Encuentro Académico de Residencias Médicas.</textoRealizado>
+	
+</data>

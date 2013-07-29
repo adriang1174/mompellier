@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Encuentro de Diagnóstco por Imágenes en Neuroradiología, Torax y Abdomen</tituloHTML>
+	
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Encuentro de Diagnóstco por Imágenes en Neuroradiología, Torax y Abdomen</subTitulo>
+	
+	<diaNombre>Sábado</diaNombre>
+	<dia>9</dia>
+	<mes>Junio</mes>
+	<ano>2012</ano>
+	
+	<lugar>Palais Rouge</lugar>
+	<lugarDireccion>Jerónimo Salguero 1441 - CABA - Buenos Aires</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=palais+rouge&amp;aq=&amp;sll=-38.452918,-63.598921&amp;sspn=55.657114,135.263672&amp;ie=UTF8&amp;hq=palais+rouge&amp;hnear=&amp;t=m&amp;cid=15261133840700966102&amp;ll=-34.582344,-58.416624&amp;spn=0.033919,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"</mapa>
+	
+	<!-- <lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto> -->
+		
+	<textoEvento><![CDATA[
+	<p>Declarado de Interes por la Facultad de Medicina UBA /Auspicia UAI</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Director" tamano="1_2">
+		<speaker>
+			<nombre>Prof. Dr. Fabián Bevacqua</nombre>
+			<texto>Prof. UBA / UAI</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Director Academico" tamano="1_2">
+		<speaker>
+			<nombre>Prof. Dr. Guillermo Rocattagliata</nombre>
+			<texto>Secretario de Asuntos Académicos de la Facultad de Medicina de la Universidad de Buenos Aires</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Disertantes" tamano="1_4" alto="93px">
+		<speaker>
+			<nombre>Dr. Hector Lambre</nombre>
+			<texto>Instituto Fleni, Sagrada Familia.</texto>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Gustavo San Martín</nombre>
+			<texto>Clínica del Sol</texto>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Sebastián Lezcano</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Fernando Ventrice</nombre>
+			<texto>Instituto Fleni e IneBa</texto>
+		</speaker>
+	</speakers>
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el exclusivo Palais Rouge el Encuentro de Diagnóstco por Imágenes en Neuroradiología, Torax y Abdomen</textoRealizado>
+	
+</data>

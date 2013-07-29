@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+
+	<tituloHTML>1º Jornada Académica del Consejo de Orientación de Medicina (CORIE)</tituloHTML>
+	
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>1º Jornada Académica del Consejo de Orientación de Medicina (CORIE)</subTitulo>
+	
+	<diaNombre>Sábado</diaNombre>
+	<dia>1</dia>
+	<mes>Septiembre</mes>
+	<ano>2012</ano>
+	
+	<lugar>Palais Rouge</lugar>
+	<lugarDireccion>Jerónimo Salguero 1441 - CABA - Buenos Aires</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=palais+rouge&amp;aq=&amp;sll=-38.452918,-63.598921&amp;sspn=55.657114,135.263672&amp;ie=UTF8&amp;hq=palais+rouge&amp;hnear=&amp;t=m&amp;cid=15261133840700966102&amp;ll=-34.582344,-58.416624&amp;spn=0.033919,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"</mapa>
+	
+	<!-- <lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto> -->
+		
+	<!--<textoEvento><![CDATA[
+	<p><strong>Compartí!</strong> La comunidad la enriquecemos entre todos. Agradecemos tu participación y difusión para crecer y ofrecerte día a día más novedades, material formativo y eventos.</p>
+	]]></textoEvento>-->
+	
+	
+	<speakers titulo="Comité de Honor" tamano="1_3" alto="105px">
+		<speaker>
+			<nombre>Prof. Dr. Alfredo Buzzi Roccatagliata</nombre>
+			<texto>Decano de la Facultad de  Medicina de la Universidad de Buenos Aires</texto>
+		</speaker>
+		<speaker>
+			<nombre>Prof. Dr. Guillermo Roccatagliata</nombre>
+			<texto>Secretario de Asuntos Académicos de la Facultad de Medicina de la Universidad de Buenos Aires</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Director del CORIE" tamano="1_3" alto="105px">
+		<speaker>
+			<nombre>Prof. Dr. Luis Solari </nombre>
+			<texto>Profesor Titular de Medicina Interna - UBA</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Disertantes" tamano="1_4">
+		<speaker>
+			<nombre>Dr. Roberto Iermoli</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Prof. Dr. Marcelo Melero</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Prof. Dr. José San Román</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Prof. Dr. Luis Solari</nombre>
+		</speaker>
+	</speakers>
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>En el marco del Encuentro Académico de Residencias Médicas vivimos la 1º Jornada Académica del Consejo de Orientación de Medicina (CORIE)</textoRealizado>
+	
+</data>

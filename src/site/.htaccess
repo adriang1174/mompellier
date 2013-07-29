@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule  ^(\w+)$ index.php?aa=$1
+RewriteRule  ^(\w+)/(\w+)$ index.php?aa=$1&evento=$2

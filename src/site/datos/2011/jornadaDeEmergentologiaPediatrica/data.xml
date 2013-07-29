@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Jornada de Emergentología Pediátrica</tituloHTML>
+	
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Jornada de Emergentología Pediátrica</subTitulo>
+	
+	<diaNombre>Sábado</diaNombre>
+	<dia>11</dia>
+	<mes>Junio</mes>
+	<ano>2011</ano>
+	
+	<lugar>Palais Rouge</lugar>
+	<lugarDireccion>Jerónimo Salguero 1441 - CABA - Buenos Aires</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=palais+rouge&amp;aq=&amp;sll=-38.452918,-63.598921&amp;sspn=55.657114,135.263672&amp;ie=UTF8&amp;hq=palais+rouge&amp;hnear=&amp;t=m&amp;cid=15261133840700966102&amp;ll=-34.582344,-58.416624&amp;spn=0.033919,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"</mapa>
+	
+	<!-- <lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto> -->
+		
+	<!--<textoEvento><![CDATA[
+	<p><strong>Compartí!</strong> La comunidad la enriquecemos entre todos. Agradecemos tu participación y difusión para crecer y ofrecerte día a día más novedades, material formativo y eventos.</p>
+	]]></textoEvento>-->
+	
+	
+	<speakers titulo="Directora" alto="175px">
+		<speaker>
+			<nombre>Dra Liliana Cáceres</nombre>
+			<texto>Médica pediatra. Jefa de Clínica Hospital de Pediatría Juan P. Garrahan. Socia fundadora de la Sociedad Argentina de Emergencias</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Disertantes" alto="175px">
+		<speaker>
+			<nombre>Prof. Dr. Nathan Kupperman (EE.UU)</nombre>
+			<texto>Médico pediatra y especialista en Emergentología Pediátrica. Jefe del Departamento de medicina de Emergencias del Centro Médico de la Universidad UC Davis</texto>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Fernando Huaier</nombre>
+			<texto>Hospital Gutierrez</texto>
+		</speaker>
+		<speaker>
+			<nombre>Dra Sandra Cagnasia</nombre>
+			<texto>Hospital Vilela – Rosario</texto>
+		</speaker>
+	</speakers>
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>En un encuentro llevado a cabo en Palais Rouge compartimos las Jornada de Emergentología Pediátrica.</textoRealizado>
+	
+</data>

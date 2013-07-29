@@ -421,6 +421,7 @@ CREATE TABLE IF NOT EXISTS `participantes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Apellido` varchar(50) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
+  `Dni` varchar(50),
   `especialidad` varchar(50) NOT NULL,
   `Hospital` varchar(50) NOT NULL,
   `Situacion` varchar(30) NOT NULL,
@@ -429,6 +430,7 @@ CREATE TABLE IF NOT EXISTS `participantes` (
   `asistio` char(1) NOT NULL DEFAULT '1',
   `FechaUltModif` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `Matricula` varchar(25) DEFAULT NULL,
+  `MatriculaProv` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla de Registracion' AUTO_INCREMENT=180 ;
 
@@ -502,6 +504,37 @@ INSERT INTO `participantes` (`id`, `Apellido`, `Nombre`, `especialidad`, `Hospit
 (179, 'Spedale', 'Alicia', 'Educaciòn Fìsica', 'Centro Medico Recoleta', 'No Informa', '48219304', 'spedalealicia@yahoo.com.ar', '1', '2013-04-27 10:14:34', '40672');
 
 -- --------------------------------------------------------
+
+--
+-- Estructura tabla cursos: codigo, descripcion, fecha, lugar
+--
+
+CREATE TABLE IF NOT EXISTS `cursos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(400),
+  `fechaInicio` timestamp,
+  `fechaFin` timestamp,
+  `lugar` varchar(400),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla de Cursos' AUTO_INCREMENT=3 ;
+
+INSERT INTO `cursos` (`id`, `descripcion`, `fechaInicio`, `fechaFin`, `lugar`) VALUES
+(1, 'Old data', null, null, null),
+(2, 'Jornada de Actualización en Osteoporósis', '2013-08-24 00:00:00', null, 'Salón el Greco');
+
+--
+-- Estructura tabla relación participantescursos: codigo, descripcion, fecha, lugar
+--
+CREATE TABLE IF NOT EXISTS `participantescursos` (
+  `idParticpiante` int(11),
+  `idCurso` int(11),
+  `fechaInscripcion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `asistio` char(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idParticpiante`,`idCurso`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla de Relación participantes-cursos';
+
+INSERT INTO `participantescursos`
+SELECT `id` as idParticipante,1 as idCurso, `asisitio` from participantes;
 
 --
 -- Estructura de tabla para la tabla `participantesold`

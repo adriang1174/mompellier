@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Patología relacionada a las alteraciones de los Sistemas Homeostáticos</tituloHTML>
+	
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Patología relacionada a las alteraciones de los Sistemas Homeostáticos</subTitulo>
+	
+	<diaNombre>Sábado</diaNombre>
+	<dia>27</dia>
+	<mes>Agosto</mes>
+	<ano>2011</ano>
+	
+	<lugar>Hotel Sheraton</lugar>
+	<lugarDireccion>Córdoba</lugarDireccion>
+	
+	<!-- <lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto> -->
+		
+	<!--<textoEvento><![CDATA[
+	<p><strong>Compartí!</strong> La comunidad la enriquecemos entre todos. Agradecemos tu participación y difusión para crecer y ofrecerte día a día más novedades, material formativo y eventos.</p>
+	]]></textoEvento>-->
+	
+	
+	<speakers titulo="Director" tamano="1_2" alto="93px">
+		<speaker>
+			<nombre>Prof. Dr. Ernesto Jacob</nombre>
+			<texto>Secretario de Postgrado – Facultad de Ciencias Médicas Universidad Nacional de Córdoba</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Coordinador General" tamano="1_2" alto="93px">
+		<speaker>
+			<nombre>Dr. Alejandro Lozano</nombre>
+			<texto>Profesor Titular de Inmunología – Facultad de Medicina Universidad Católica de Córdoba Director de la carrera de Especialista en Alergia e Inmun. Facultad de Medicina - Universidad Católica de Córdoba</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Disertantes" tamano="1_2">
+		<speaker>
+			<nombre>Dr. Horacio Repetto</nombre>
+			<texto>Profesor Titular Consulto de la UBA Director de las Carreras de Especialista en Pediatría y Nefrología Pediátrica</texto>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Enrique Mansilla</nombre>
+			<texto>Profesor Adjunto de Otorrinolaringología (ORL) de la UBA. Jefe del Sector de ORL Infantil de la División de ORL del Hospital de Clínicas (Bs. As.)</texto>
+		</speaker>
+	</speakers>
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>En el exclusivo Hotel Sheraton de Córdoba se realizó con éxito la jornada llamada "Patología relacionada a las alteraciones de los Sistemas Homeostáticos"</textoRealizado>
+	
+</data>

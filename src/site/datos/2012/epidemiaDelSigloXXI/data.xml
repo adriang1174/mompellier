@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Epidemia del Siglo XXI: El Síndrome Metabólico. Beneficios de la Actividad Física y la Alimentación</tituloHTML>
+	
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Epidemia del Siglo XXI: El Síndrome Metabólico. Beneficios de la Actividad Física y la Alimentación</subTitulo>
+	
+	<diaNombre>Sábado</diaNombre>
+	<dia>13</dia>
+	<mes>Octubre</mes>
+	<ano>2012</ano>
+	
+	<lugar>Palais Rouge</lugar>
+	<lugarDireccion>Jerónimo Salguero 1441 - CABA - Buenos Aires</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=palais+rouge&amp;aq=&amp;sll=-38.452918,-63.598921&amp;sspn=55.657114,135.263672&amp;ie=UTF8&amp;hq=palais+rouge&amp;hnear=&amp;t=m&amp;cid=15261133840700966102&amp;ll=-34.582344,-58.416624&amp;spn=0.033919,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"</mapa>
+	
+	<!-- <lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto> -->
+		
+	<textoEvento><![CDATA[
+	<p>Secretaria de Salud Publica CABA, Ministerio de Salud Publica de la Nacion, Asociacion Medica Argentina (AMA), Asociacion de Médicos Municipales, Sociedad Argentina de Diabetes</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Director" tamano='1_2'>
+		<speaker>
+			<nombre>Prof. Dra. Valenti</nombre>
+			<texto>Secretaría de Salud Publica CABA</texto>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Alejandro Maríncola</nombre>
+			<texto>Jefe de Departamento del Hospital Penna</texto>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Disertantes" tamano='1_3'>
+		<speaker>
+			<nombre>Dr. Nelio Bazán</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Lic. Marcela Gonzalez</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Roberto Peidró</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Julio Szuster</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Alicia Bernasconi</nombre>
+		</speaker>
+	</speakers>
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>A cargo de la Secretaría de Salud Pública CABA se llevó a cabo la jornada "Epidemia del Siglo XXI: El Síndrome Metabólico. Beneficios de la Actividad Física y la Alimentación"</textoRealizado>
+	
+</data>
