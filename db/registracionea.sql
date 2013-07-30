@@ -18,12 +18,13 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Base de datos: `registracionea`
 --
-
+use uv9007_registracionea;
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `especialidades`
 --
+DROP TABLE IF EXISTS `especialidades`;
 
 CREATE TABLE IF NOT EXISTS `especialidades` (
   `idEspecialidad` int(11) NOT NULL,
@@ -106,6 +107,7 @@ INSERT INTO `especialidades` (`idEspecialidad`, `Descripcion`) VALUES
 --
 -- Estructura de tabla para la tabla `hospitales`
 --
+DROP TABLE IF EXISTS `hospitales`;
 
 CREATE TABLE IF NOT EXISTS `hospitales` (
   `idHospital` int(11) NOT NULL,
@@ -211,6 +213,7 @@ INSERT INTO `hospitales` (`idHospital`, `descripcion`, `otro`) VALUES
 --
 -- Estructura de tabla para la tabla `original`
 --
+DROP TABLE IF EXISTS `original`;
 
 CREATE TABLE IF NOT EXISTS `original` (
   `c1` varchar(100) DEFAULT NULL,
@@ -417,6 +420,8 @@ INSERT INTO `original` (`c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`) VALUES
 -- Estructura de tabla para la tabla `participantes`
 --
 
+DROP TABLE IF EXISTS `participantes`;
+
 CREATE TABLE IF NOT EXISTS `participantes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Apellido` varchar(50) NOT NULL,
@@ -508,37 +513,41 @@ INSERT INTO `participantes` (`id`, `Apellido`, `Nombre`, `especialidad`, `Hospit
 --
 -- Estructura tabla cursos: codigo, descripcion, fecha, lugar
 --
+DROP TABLE IF EXISTS `cursos`;
 
 CREATE TABLE IF NOT EXISTS `cursos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` varchar(400) NOT NULL ,
   `descripcion` varchar(400),
   `fechaInicio` timestamp,
   `fechaFin` timestamp,
   `lugar` varchar(400),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla de Cursos' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla de Cursos' ;
 
 INSERT INTO `cursos` (`id`, `descripcion`, `fechaInicio`, `fechaFin`, `lugar`) VALUES
-(1, 'Old data', null, null, null),
-(2, 'Jornada de Actualización en Osteoporósis', '2013-08-24 00:00:00', null, 'Salón el Greco');
+('TodosLosCursosAnteriores', 'Old data', null, null, null),
+('2013/jornadaDeActualizacionEnOsteoporosis', 'Jornada de Actualización en Osteoporósis', '2013-08-24 00:00:00', null, 'Salón el Greco');
 
 --
 -- Estructura tabla relación participantescursos: codigo, descripcion, fecha, lugar
 --
+DROP TABLE IF EXISTS `participantescursos`;
+
 CREATE TABLE IF NOT EXISTS `participantescursos` (
   `idParticpiante` int(11),
-  `idCurso` int(11),
+  `idCurso` varchar(400),
   `fechaInscripcion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `asistio` char(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idParticpiante`,`idCurso`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla de Relación participantes-cursos';
 
-INSERT INTO `participantescursos`
-SELECT `id` as idParticipante,1 as idCurso, `asisitio` from participantes;
+INSERT INTO `participantescursos` (idParticpiante,idCurso,asistio)
+SELECT `id` as idParticipante,'TodosLosCursosAnteriores' as idCurso, `asistio` from participantes;
 
 --
 -- Estructura de tabla para la tabla `participantesold`
 --
+DROP TABLE IF EXISTS `participantesold`;
 
 CREATE TABLE IF NOT EXISTS `participantesold` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -868,6 +877,7 @@ INSERT INTO `participantesold` (`id`, `Apellido`, `Nombre`, `especialidad`, `Hos
 --
 -- Estructura de tabla para la tabla `situaciones`
 --
+DROP TABLE IF EXISTS `situaciones`;
 
 CREATE TABLE IF NOT EXISTS `situaciones` (
   `idSituacion` int(11) NOT NULL,

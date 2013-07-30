@@ -343,6 +343,81 @@ function ponerProximosEventos() {
   ga('create', 'UA-42561438-1', 'comunidadresidentes.com.ar');
   ga('send', 'pageview');
 </script>
+<script>
+$( document ).ready(function() {
+		//Populate especialidad dropdown
+		$.post("db.php", {
+		  a : "get_spec" },
+		  function(data) {
+			var sel = $("#especialidad");
+			sel.empty();
+			for (var i=0; i<data.length; i++) {
+			  sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
+			}
+		  }, "json");
+		//Populate condicion dropdown
+		$.post("db.php", {
+		  a : "get_sit" },
+		  function(data) {
+			var sel = $("#condicion");
+			sel.empty();
+			for (var i=0; i<data.length; i++) {
+			  sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
+			}
+		  }, "json");
+		//Populate institucion dropdown
+		$.post("db.php", {
+		  a : "get_inst" },
+		  function(data) {
+			var sel = $("#institucion");
+			sel.empty();
+			for (var i=0; i<data.length; i++) {
+			  sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
+			}
+		  }, "json");
+});
+</script>
+<script>
+function validateForm(){
+					var errtxt = "";
+					if(	$("#nombre").val() == '')
+					{
+						errtxt += 'Debe ingresar Nombre.\n';
+					}
+					if ($("#apellido").val() == '')
+					{
+						errtxt += 'Debe ingresar Apellido.\n';
+					}
+					if($("#telefono").val() == '')
+					{
+						errtxt += 'Debe ingresar Telefono.\n';
+					}
+					if($("#dni").val() == '')
+					{
+						errtxt += 'Debe ingresar DNI.\n';
+					}
+					if($("#email").val() == '')
+					{
+						errtxt += 'Debe ingresar Email.\n';
+					}
+					if($("#institucion").val() == '')
+					{
+						errtxt += 'Debe ingresar Institución.\n';
+					}
+					if($("#localidad").val() == '')
+					{
+						errtxt += 'Debe ingresar Localidad.\n';
+					}
+					if($("#provincia").val() == '')
+					{
+						errtxt += 'Debe ingresar Provincia.\n';
+					}
+					if (errtxt != '')
+					{
+						jAlert("<strong>"+errtxt+"</strong>", "Alerta");
+					}
+}
+</script>;
 </head>
 
 <body>
@@ -434,7 +509,7 @@ function ponerProximosEventos() {
         
         	<!-- Formulario de Inscripcion -->
             <div class="bloque formulario">
-           		<form action="/inscripcion" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise">
+           		<form action="/inscripcion" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise" onsubmit="return validateForm();">
 				<div class="titulo" style="margin-bottom:20px">Formulario de Inscripción</div>
                 <p>
                 	<span>Nombre</span><input id="nombre" name="nombre" type="text" class="campo" />
@@ -444,31 +519,29 @@ function ponerProximosEventos() {
                 	<span>Teléfono</span><input id="telefono" name="telefono" type="text" class="campo" />
                     <span>E-mail</span><input id="email" name="email" type="text" class="campo" />
                 </p>
+				<p>
+                    <span>DNI</span><input id="dni" name="dni" type="text" class="campo" />				
+                	<span>Condición</span>
+					<select id="condicion" name="condicion" class="campo" style="width:238px">
+					</select>
+                </p>
                 <p>
                 	<span>Matricula Nº - Nac</span><input id="matriculaNac" name="matriculaNac" type="text" class="campo" />
                     <span>Matricula Nº - Prov</span><input id="matriculaProv" name="matriculaProv" type="text" class="campo" />
 				</p>
                 <p>
-                	<span>Condición</span>
-					<select id="condicion" name="condicion" class="campo" style="width:238px">
-					  <option value="opcion1">opcion1</option>
-					  <option value="opcion2">opcion2</option>
-					  <option value="opcion3">opcion3</option>
-					</select>
                     <span>Especialidad</span>
                     <select id="especialidad" name="especialidad" class="campo" style="width:238px">
-					  <option value="opcion1">opcion1</option>
-					  <option value="opcion2">opcion2</option>
-					  <option value="opcion3">opcion3</option>
 					</select>
-                </p>
-                <p>
-                	<span>Institución</span><input id="institucion" name="institucion" type="text" class="campo" />
-                    <span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
+                	<span>Institución</span>
+					<select id="institucion" name="institucion" class="campo" style="width:238px">
+					</select>
 				</p>
                 <p>
+                    <span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
                     <span>Provincia</span><input id="provincia" name="provincia" type="text" class="campo" />
                     <input id="nombreEvento" name="nombreEvento" type="hidden" value="<?php nombreEvento() ?>" />
+					<input id="idEvento" name="idEvento" type="hidden" value="<?= $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue ?>" />
 				</p>
                 <?php require_once('recaptcha-php-1.11/recaptchalib.php');
 				$publickey = " 	6LeSE-USAAAAAGHq9mrDbk3OjeJU54R4Jo0LJfHM "; // you got this from the signup page
@@ -506,7 +579,34 @@ function ponerProximosEventos() {
 					$("#provincia").val("'.$_POST["provincia"].'");
 					jAlert("<strong>El Captcha ingresado no es correcto.<br>Por favor vuelva a introducirlo.</strong>", "Alerta");
 					</script>';
-				} else { // mandamos el mail
+				} else { 
+				    // registramos en la base
+					$errorDB = false;
+					$link =  mysqli_connect('localhost', 'uv9007', 'V*d*o*3037!','uv9007_registracionea');
+					if (mysqli_connect_errno()) {
+						$errorDB = true;
+					}
+					$action         = $_REQUEST['a'];
+					$apellido       = $_REQUEST['apellido'];
+					$nombre 	    = $_REQUEST['nombre'];
+					$dni			= $_REQUEST['dni'];
+					$especialidad   = $_REQUEST['especialidad'];
+					$hospital		= $_REQUEST['institucion'];
+					$situacion		= $_REQUEST['condicion'];
+					$telefono		= $_REQUEST['telefono'];
+					$mail			= $_REQUEST['email'];
+					$matricula		= $_REQUEST['matriculaNac'];
+					$matricula_prov = $_REQUEST['matriculaProv'];
+					$idCurso        = $_REQUEST['idEvento'];
+					$sql = "insert into partcipantes (Apellido,Nombre,Dni,especialidad,Hospital,Situacion,Telefono,Mail,Matricula,MatriculaProv) 
+							values('{$apellido}','{$nombre}','{$dni}','{$especialidad}','{$hospital}','{$situacion}','{$telefono}','{$mail}','{$matricula}','{$matricula_prov}')";
+					$res = mysqli_query($link,$sql);
+					$idParticipante = mysqli_insert_id($link);
+					
+					$sql = "insert into participantescursos (idParticpiante,idCurso,asistio) 
+							values({$idParticipante},{$idCurso}','0')";
+					$res = mysqli_query($sql);
+					// mandamos el mail
 					require("send/class.phpmailer.php");
 					$mail = new PHPMailer();
 					$mail->From = "contacto@comunidadresidentes.com.ar";
@@ -532,7 +632,9 @@ function ponerProximosEventos() {
 					<strong>Localidad: </strong>" . $_POST["localidad"] . "<br>
 					<strong>Provincia: </strong>" . $_POST["provincia"] . "<br>
 					</font>";
-					if(!$mail->Send()) {
+					$mailOK = $mail->Send();
+					if(!$mailOK or $errorDB) {
+						echo "<script>jAlert('<strong>Ha habido un problema con su inscipción.</strong>', 'Por favor intente nuevamente');</script>";
 					} else {	
 					}
 					echo "<script>location.href='http://www.comunidadresidentes.com.ar/inscripcion/gracias';</script>";
