@@ -343,81 +343,6 @@ function ponerProximosEventos() {
   ga('create', 'UA-42561438-1', 'comunidadresidentes.com.ar');
   ga('send', 'pageview');
 </script>
-<script>
-$( document ).ready(function() {
-		//Populate especialidad dropdown
-		$.post("db.php", {
-		  a : "get_spec" },
-		  function(data) {
-			var sel = $("#especialidad");
-			sel.empty();
-			for (var i=0; i<data.length; i++) {
-			  sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
-			}
-		  }, "json");
-		//Populate condicion dropdown
-		$.post("db.php", {
-		  a : "get_sit" },
-		  function(data) {
-			var sel = $("#condicion");
-			sel.empty();
-			for (var i=0; i<data.length; i++) {
-			  sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
-			}
-		  }, "json");
-		//Populate institucion dropdown
-		$.post("db.php", {
-		  a : "get_inst" },
-		  function(data) {
-			var sel = $("#institucion");
-			sel.empty();
-			for (var i=0; i<data.length; i++) {
-			  sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
-			}
-		  }, "json");
-});
-</script>
-<script>
-function validateForm(){
-					var errtxt = "";
-					if(	$("#nombre").val() == '')
-					{
-						errtxt += 'Debe ingresar Nombre.\n';
-					}
-					if ($("#apellido").val() == '')
-					{
-						errtxt += 'Debe ingresar Apellido.\n';
-					}
-					if($("#telefono").val() == '')
-					{
-						errtxt += 'Debe ingresar Telefono.\n';
-					}
-					if($("#dni").val() == '')
-					{
-						errtxt += 'Debe ingresar DNI.\n';
-					}
-					if($("#email").val() == '')
-					{
-						errtxt += 'Debe ingresar Email.\n';
-					}
-					if($("#institucion").val() == '')
-					{
-						errtxt += 'Debe ingresar Institución.\n';
-					}
-					if($("#localidad").val() == '')
-					{
-						errtxt += 'Debe ingresar Localidad.\n';
-					}
-					if($("#provincia").val() == '')
-					{
-						errtxt += 'Debe ingresar Provincia.\n';
-					}
-					if (errtxt != '')
-					{
-						jAlert("<strong>"+errtxt+"</strong>", "Alerta");
-					}
-}
-</script>;
 </head>
 
 <body>
@@ -509,7 +434,7 @@ function validateForm(){
         
         	<!-- Formulario de Inscripcion -->
             <div class="bloque formulario">
-           		<form action="/inscripcion" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise" onsubmit="return validateForm();">
+           		<form action="/inscripcion" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise">
 				<div class="titulo" style="margin-bottom:20px">Formulario de Inscripción</div>
                 <p>
                 	<span>Nombre</span><input id="nombre" name="nombre" type="text" class="campo" />
@@ -570,14 +495,16 @@ function validateForm(){
 					$("#apellido").val("'.$_POST["apellido"].'");
 					$("#telefono").val("'.$_POST["telefono"].'");
 					$("#email").val("'.$_POST["email"].'");
+					$("#dni").val("'.$_POST["dni"].'");
 					$("#matriculaNac").val("'.$_POST["matriculaNac"].'");
 					$("#matriculaProv").val("'.$_POST["matriculaProv"].'");
-					$("#condicion").val("'.$_POST["condicion"].'");
-					$("#especialidad").val("'.$_POST["especialidad"].'");
-					$("#institucion").val("'.$_POST["institucion"].'");
+					populateEspec("'.$_POST['especialidad'].'");
+					populateCond("'.$_POST['condicion'].'");
+					populateInst("'.$_POST['institucion'].'");
 					$("#localidad").val("'.$_POST["localidad"].'");
 					$("#provincia").val("'.$_POST["provincia"].'");
 					jAlert("<strong>El Captcha ingresado no es correcto.<br>Por favor vuelva a introducirlo.</strong>", "Alerta");
+
 					</script>';
 				} else { 
 				    // registramos en la base
@@ -587,31 +514,34 @@ function validateForm(){
 						$errorDB = true;
 					}
 					$action         = $_REQUEST['a'];
-					$apellido       = $_REQUEST['apellido'];
-					$nombre 	    = $_REQUEST['nombre'];
-					$dni			= $_REQUEST['dni'];
-					$especialidad   = $_REQUEST['especialidad'];
-					$hospital		= $_REQUEST['institucion'];
-					$situacion		= $_REQUEST['condicion'];
-					$telefono		= $_REQUEST['telefono'];
-					$mail			= $_REQUEST['email'];
-					$matricula		= $_REQUEST['matriculaNac'];
-					$matricula_prov = $_REQUEST['matriculaProv'];
+					$apellido       = mysqli_real_escape_string($link, utf8_decode($_REQUEST['apellido']));
+					$nombre 	    = mysqli_real_escape_string($link, utf8_decode($_REQUEST['nombre']));
+					$dni			= mysqli_real_escape_string($link, $_REQUEST['dni']);
+					$especialidad   = mysqli_real_escape_string($link, utf8_decode($_REQUEST['especialidad']));
+					$hospital		= mysqli_real_escape_string($link, utf8_decode($_REQUEST['institucion']));
+					$situacion		= mysqli_real_escape_string($link, utf8_decode($_REQUEST['condicion']));
+					$telefono		= mysqli_real_escape_string($link, $_REQUEST['telefono']);
+					$mail			= mysqli_real_escape_string($link, $_REQUEST['email']);
+					$matricula		= mysqli_real_escape_string($link, $_REQUEST['matriculaNac']);
+					$matricula_prov = mysqli_real_escape_string($link, $_REQUEST['matriculaProv']);
 					$idCurso        = $_REQUEST['idEvento'];
-					$sql = "insert into partcipantes (Apellido,Nombre,Dni,especialidad,Hospital,Situacion,Telefono,Mail,Matricula,MatriculaProv) 
+					$sql = "insert into participantes (Apellido,Nombre,Dni,especialidad,Hospital,Situacion,Telefono,Mail,Matricula,MatriculaProv) 
 							values('{$apellido}','{$nombre}','{$dni}','{$especialidad}','{$hospital}','{$situacion}','{$telefono}','{$mail}','{$matricula}','{$matricula_prov}')";
 					$res = mysqli_query($link,$sql);
+					//echo $sql;
 					$idParticipante = mysqli_insert_id($link);
 					
-					$sql = "insert into participantescursos (idParticpiante,idCurso,asistio) 
-							values({$idParticipante},{$idCurso}','0')";
-					$res = mysqli_query($sql);
+					$sql = "insert into participantescursos (idParticipante,idCurso,asistio) 
+							values({$idParticipante},'{$idCurso}','0')";
+					$res = mysqli_query($link,$sql);
+					//echo $sql;
 					// mandamos el mail
 					require("send/class.phpmailer.php");
 					$mail = new PHPMailer();
 					$mail->From = "contacto@comunidadresidentes.com.ar";
 					$mail->FromName = "Comunidad Medico Residente";
 					//$mail->AddAddress("osvaldo@globaldardos.com");
+					//$mail->AddAddress("adriang_1174@hotmail.com");
 					$mail->AddAddress("contacto@comunidadresidentes.com.ar");
 					$mail->WordWrap = 50;                                 // set word wrap to 50 characters
 					$mail->IsHTML(true);                                  // set email format to HTML
@@ -632,18 +562,37 @@ function validateForm(){
 					<strong>Localidad: </strong>" . $_POST["localidad"] . "<br>
 					<strong>Provincia: </strong>" . $_POST["provincia"] . "<br>
 					</font>";
+					if ($errorDB)
+					{
+						$mail->Body .= "<br><strong>Atención: Se ha producido un error en la base de datos y esta inscripción no ha sido incorporada, salvo que el residente haya completado un nuevo formulario </strong>";
+					}
 					$mailOK = $mail->Send();
 					if(!$mailOK or $errorDB) {
-						echo "<script>jAlert('<strong>Ha habido un problema con su inscipción.</strong>', 'Por favor intente nuevamente');</script>";
+						echo "<script>  	populateEspec('');
+											populateCond('');
+											populateInst('');
+											jAlert('<strong>Ha habido un problema con su inscipción.</strong>', 'Por favor intente nuevamente');
+							  </script>";
 					} else {	
+							echo "<script>location.href='http://www.comunidadresidentes.com.ar/inscripcion/gracias';</script>";
 					}
-					echo "<script>location.href='http://www.comunidadresidentes.com.ar/inscripcion/gracias';</script>";
+
 				}
+			}
+			else{
+					echo "<script>	populateEspec('');
+								populateCond('');
+								populateInst('');
+					  </script>";
 			}
 			?>
             
 			<?php if ((isset($_GET["evento"])) && ($_GET["evento"]=="gracias")) {
-				echo "<script>jAlert('<strong>El Formulario ha sido enviado correctamente.</strong>', 'Muchas gracias por inscribirse');</script>";
+				echo "<script>	populateEspec('');
+								populateCond('');
+								populateInst('');
+								jAlert('<strong>El Formulario ha sido enviado correctamente.</strong>', 'Muchas gracias por inscribirse');
+					  </script>";
             } ?>
             
         <?php } else { ?>

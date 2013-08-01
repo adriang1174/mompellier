@@ -25,7 +25,7 @@ switch($action){
 					$res = mysqli_query($link,"SELECT * FROM especialidades order by Descripcion");
 					while ($row = mysqli_fetch_array($res)) {
 					  $result[] = array(
-						'id' => $row['idEspecialidad'],
+						'id' => utf8_encode($row['Descripcion']),
 						'desc' => utf8_encode($row['Descripcion']),
 					  );
 					}
@@ -34,7 +34,7 @@ switch($action){
 					$res = mysqli_query($link,"SELECT * FROM situaciones order by descripcion");
 					while ($row = mysqli_fetch_array($res)) {
 					  $result[] = array(
-						'id' => $row['idSituacion'],
+						'id' => utf8_encode($row['descripcion']),
 						'desc' => utf8_encode($row['descripcion']),
 					  );
 					}
@@ -43,7 +43,7 @@ switch($action){
 					$res = mysqli_query($link,"SELECT * FROM hospitales  order by descripcion");
 					while ($row = mysqli_fetch_array($res)) {
 					  $result[] = array(
-						'id' => $row['idHospital'],
+						'id' => utf8_encode($row['descripcion']),
 						'desc' => utf8_encode($row['descripcion']),
 					  );
 					}

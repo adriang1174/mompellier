@@ -82,7 +82,66 @@ function enviarNews() {
 	})
 }
 
+function populateEspec(seltxt)
+{
+	//Populate especialidad dropdown
+	$.post("../db.php", {
+	  a : "get_spec" },
+	  function(data) {
+		var sel = $("#especialidad");
+		sel.empty();
+		sel.append('<option value="">Seleccione...</option>');		
+		for (var i=0; i<data.length; i++) {
+			if(data[i].desc == seltxt){
+				sel.append('<option value="' + data[i].id + '" selected>' + data[i].desc + '</option>');	
+			}
+			else{
+				sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
+			}
+		}
+	  }, "json");
+}
+
+function populateCond(seltxt)
+{
+	$.post("../db.php", {
+	  a : "get_sit" },
+	  function(data) {
+		var sel = $("#condicion");
+		sel.empty();
+		sel.append('<option value="">Seleccione...</option>');		
+		for (var i=0; i<data.length; i++) {
+			if(data[i].desc == seltxt){
+				sel.append('<option value="' + data[i].id + '" selected>' + data[i].desc + '</option>');	
+			}
+			else{
+				sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
+			}
+		}
+	  }, "json");
+}
+
+function populateInst(seltxt)
+{
+	$.post("../db.php", {
+	  a : "get_inst" },
+	  function(data) {
+		var sel = $("#institucion");
+		sel.empty();
+		sel.append('<option value="">Seleccione...</option>');
+		for (var i=0; i<data.length; i++) {
+			if(data[i].desc == seltxt){
+				sel.append('<option value="' + data[i].id + '" selected>' + data[i].desc + '</option>');	
+			}
+			else{
+				sel.append('<option value="' + data[i].id + '">' + data[i].desc + '</option>');
+			}
+		}
+	  }, "json");
+}
+
 $(document).ready(function () {
+
 	$("#newsNombre").focus(function() {
 		if ($(this).val()=="Nombre..."){
 			$(this).val("");
@@ -121,7 +180,7 @@ $(document).ready(function () {
 	
 	//acciones formulario Contacto;
 	$("#botonInscribirse").click(function(){
-		if ( ($("#nombre").val()!="") &&
+/*		if ( ($("#nombre").val()!="") &&
 			 ($("#apellido").val()!="") &&
 			 ($("#telefono").val()!="") &&
 			 ($("#email").val()!="") &&
@@ -136,7 +195,47 @@ $(document).ready(function () {
 			enviarForm();
 		} else {
 			jAlert('Por favor complete todos los campos\npara poder enviar el Formulario', 'Alerta');	
-		}
+		} */
+							var errtxt = "";
+					if(	$("#nombre").val() == '')
+					{
+						errtxt += 'Debe ingresar Nombre.\n';
+					}
+					if ($("#apellido").val() == '')
+					{
+						errtxt += 'Debe ingresar Apellido.\n';
+					}
+					if($("#telefono").val() == '')
+					{
+						errtxt += 'Debe ingresar Telefono.\n';
+					}
+					if($("#dni").val() == '')
+					{
+						errtxt += 'Debe ingresar DNI.\n';
+					}
+					if($("#email").val() == '')
+					{
+						errtxt += 'Debe ingresar Email.\n';
+					}
+					if($("#institucion").val() == '')
+					{
+						errtxt += 'Debe ingresar Institución.\n';
+					}
+					if($("#localidad").val() == '')
+					{
+						errtxt += 'Debe ingresar Localidad.\n';
+					}
+					if($("#provincia").val() == '')
+					{
+						errtxt += 'Debe ingresar Provincia.\n';
+					}
+					if (errtxt != '')
+					{
+						jAlert("<strong>"+errtxt+"</strong>", "Alerta");
+					}
+					else{
+							enviarForm();
+					}
 	});
 	
 	

@@ -126,7 +126,7 @@ INSERT INTO `hospitales` (`idHospital`, `descripcion`, `otro`) VALUES
 (4, 'ASMEL                                     ', '4'),
 (5, 'Htal. Belgrano                                  ', '5'),
 (6, 'Bernardino Rivadavia                      ', '6'),
-(8, 'CAPS Nº  7 "Dr. Eizaguirre"  Villa Celina ', '8'),
+(8, 'CAPS Nº  7 Dr. Eizaguirre - Villa Celina ', '8'),
 (9, 'Cemic                                     ', '9'),
 (10, 'Clínicas                                  ', '10'),
 (11, 'Durand                                    ', '11'),
@@ -534,7 +534,7 @@ INSERT INTO `cursos` (`id`, `descripcion`, `fechaInicio`, `fechaFin`, `lugar`) V
 DROP TABLE IF EXISTS `participantescursos`;
 
 CREATE TABLE IF NOT EXISTS `participantescursos` (
-  `idParticpiante` int(11),
+  `idParticipante` int(11),
   `idCurso` varchar(400),
   `fechaInscripcion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `asistio` char(1) NOT NULL DEFAULT '1',
