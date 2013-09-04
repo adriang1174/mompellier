@@ -472,6 +472,7 @@ function ponerProximosEventos() {
                 	<span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
                     <span>Provincia</span><input id="provincia" name="provincia" type="text" class="campo" />
                     <input id="nombreEvento" name="nombreEvento" type="hidden" value="<?php nombreEvento() ?>" />
+					<input id="idEvento" name="idEvento" type="hidden" value="<?= $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue ?>" />
 				</p>
                 <?php require_once('recaptcha-php-1.11/recaptchalib.php');
 				$publickey = " 	6LeSE-USAAAAAGHq9mrDbk3OjeJU54R4Jo0LJfHM "; // you got this from the signup page
@@ -503,10 +504,10 @@ function ponerProximosEventos() {
 					$("#email").val("'.$_POST["email"].'");
 					$("#matriculaNac").val("'.$_POST["matriculaNac"].'");
 					$("#matriculaProv").val("'.$_POST["matriculaProv"].'");
-					$("#condicion").val("'.$_POST["condicion"].'");
 					populateEspec("'.$_POST['especialidad'].'");
 					populateCond("'.$_POST['condicion'].'");
 					populateInst("'.$_POST['institucion'].'");
+					$("#condicion").val("'.$_POST["condicion"].'");
 					$("#especialidad").val("'.$_POST["especialidad"].'");
 					$("#institucion").val("'.$_POST["institucion"].'");
 					$("#localidad").val("'.$_POST["localidad"].'");
@@ -537,9 +538,9 @@ function ponerProximosEventos() {
 							$res = mysqli_query($link,$sql);
 							$idParticipante = mysqli_insert_id($link);
 
-							$sql = "insert into participantescursos (idParticpiante,idCurso,asistio)
-							values({$idParticipante},{$idCurso}','0')";
-							$res = mysqli_query($sql);
+							$sql = "insert into participantescursos (idParticipante,idCurso,asistio)
+							values({$idParticipante},'{$idCurso}','0')";
+							$res = mysqli_query($link,$sql);
 							// mandamos el mail
 							require("send/class.phpmailer.php");
 							$mail = new PHPMailer();
