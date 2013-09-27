@@ -118,10 +118,16 @@ function ponerSpeakers() {
 				$altoSpeaker="";
 			}
 			
+			if (isset($_GET["evento"])) {
+				$carpeta=$_GET["aa"].'/'.$_GET["evento"];
+			} else {
+				$carpeta=$eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue;
+			}
+			
 			for ($j = 0; $j < $doc->getElementsByTagName('speakers')->item($i)->getElementsByTagName('speaker')->length; $j++) {
 				
 				if ($doc->getElementsByTagName('speakers')->item($i)->getElementsByTagName('speaker')->item($j)->getElementsByTagName('foto')->item(0)) {
-					$fotoSpeaker=$root.'datos/'.$eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue.'/'.$doc->getElementsByTagName('speakers')->item($i)->getElementsByTagName('speaker')->item($j)->getElementsByTagName('foto')->item(0)->nodeValue;
+					$fotoSpeaker=$root.'datos/'.$carpeta.'/'.$doc->getElementsByTagName('speakers')->item($i)->getElementsByTagName('speaker')->item($j)->getElementsByTagName('foto')->item(0)->nodeValue;
 				} else {
 					$fotoSpeaker=$root.'img/speaker.jpg';
 				}
@@ -149,7 +155,7 @@ function ponerAlmanaque() {
 		echo'<div class="almanaque">
                 <div class="iconoAlmanaque">
                     <div class="mes">'.$doc->getElementsByTagName('mes')->item(0)->nodeValue.'</div>
-                    <div class="dia">'.$doc->getElementsByTagName('dia')->item(0)->nodeValue.'</div>
+                    <div class="dia">'.substr($doc->getElementsByTagName('dia')->item(0)->nodeValue, 0, 2).'</div>
                 </div>
 				'.$doc->getElementsByTagName('diaNombre')->item(0)->nodeValue.' <strong>'.$doc->getElementsByTagName('dia')->item(0)->nodeValue.'</strong> de<br />
 				<strong>'.$doc->getElementsByTagName('mes')->item(0)->nodeValue.'</strong> de '.$doc->getElementsByTagName('ano')->item(0)->nodeValue.'
@@ -276,7 +282,7 @@ function ponerProximosEventos() {
 	for ($i = 0; $i < $eventosTodos->getElementsByTagName('proximo')->length; $i++) {
 		echo '<a class="eventoProx" href="'.$root.$eventosTodos->getElementsByTagName('proximo')->item($i)->nodeValue.'" target="_blank">
 					<div class="flecha">
-						<p class="nombre">'.$eventoProximo[$i]->getElementsByTagName('nombreEvento')->item(0)->nodeValue.'</p>
+						<p class="nombre">'.$eventoProximo[$i]->getElementsByTagName('subTitulo')->item(0)->nodeValue.'</p>
 						<p class="lugar">'.$eventoProximo[$i]->getElementsByTagName('lugar')->item(0)->nodeValue.'</p>
 						<p class="txt">'.$eventoProximo[$i]->getElementsByTagName('dia')->item(0)->nodeValue.' de '.$eventoProximo[$i]->getElementsByTagName('mes')->item(0)->nodeValue.' de '.$eventoProximo[$i]->getElementsByTagName('ano')->item(0)->nodeValue.'</p>
 					</div>
@@ -441,29 +447,29 @@ function ponerProximosEventos() {
                     <span>Apellido</span><input id="apellido" name="apellido" type="text" class="campo" />
 				</p>
                 <p>
-                	<span>Teléfono</span><input id="telefono" name="telefono" type="text" class="campo" />
-                    <span>E-mail</span><input id="email" name="email" type="text" class="campo" />
+                	<span>DNI</span><input id="dni" name="dni" type="text" class="campo" />
+                    <span>Teléfono</span><input id="telefono" name="telefono" type="text" class="campo" />
                 </p>
-				<p>
-                    <span>DNI</span><input id="dni" name="dni" type="text" class="campo" />				
+                <p>
+                	<span>E-mail</span><input id="email" name="email" type="text" class="campo" />
+                    <span>Matricula Nº - Nac</span><input id="matriculaNac" name="matriculaNac" type="text" class="campo" />
+				</p>
+                <p>
+                	<span>Matricula Nº - Prov</span><input id="matriculaProv" name="matriculaProv" type="text" class="campo" />
                 	<span>Condición</span>
 					<select id="condicion" name="condicion" class="campo" style="width:238px">
 					</select>
                 </p>
                 <p>
-                	<span>Matricula Nº - Nac</span><input id="matriculaNac" name="matriculaNac" type="text" class="campo" />
-                    <span>Matricula Nº - Prov</span><input id="matriculaProv" name="matriculaProv" type="text" class="campo" />
-				</p>
-                <p>
-                    <span>Especialidad</span>
+                	<span>Especialidad</span>
                     <select id="especialidad" name="especialidad" class="campo" style="width:238px">
 					</select>
-                	<span>Institución</span>
+					<span>Institución</span>
 					<select id="institucion" name="institucion" class="campo" style="width:238px">
 					</select>
 				</p>
                 <p>
-                    <span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
+                	<span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
                     <span>Provincia</span><input id="provincia" name="provincia" type="text" class="campo" />
                     <input id="nombreEvento" name="nombreEvento" type="hidden" value="<?php nombreEvento() ?>" />
 					<input id="idEvento" name="idEvento" type="hidden" value="<?= $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue ?>" />
@@ -493,91 +499,91 @@ function ponerProximosEventos() {
 					echo '<script>
 					$("#nombre").val("'.$_POST["nombre"].'");
 					$("#apellido").val("'.$_POST["apellido"].'");
+					$("#dni").val("'.$_POST["dni"].'");
 					$("#telefono").val("'.$_POST["telefono"].'");
 					$("#email").val("'.$_POST["email"].'");
-					$("#dni").val("'.$_POST["dni"].'");
 					$("#matriculaNac").val("'.$_POST["matriculaNac"].'");
 					$("#matriculaProv").val("'.$_POST["matriculaProv"].'");
 					populateEspec("'.$_POST['especialidad'].'");
 					populateCond("'.$_POST['condicion'].'");
 					populateInst("'.$_POST['institucion'].'");
+					$("#condicion").val("'.$_POST["condicion"].'");
+					$("#especialidad").val("'.$_POST["especialidad"].'");
+					$("#institucion").val("'.$_POST["institucion"].'");
 					$("#localidad").val("'.$_POST["localidad"].'");
 					$("#provincia").val("'.$_POST["provincia"].'");
 					jAlert("<strong>El Captcha ingresado no es correcto.<br>Por favor vuelva a introducirlo.</strong>", "Alerta");
-
 					</script>';
-				} else { 
-				    // registramos en la base
-					$errorDB = false;
-					$link =  mysqli_connect('localhost', 'uv9007', 'V*d*o*3037!','uv9007_registracionea');
-					if (mysqli_connect_errno()) {
-						$errorDB = true;
-					}
-					$action         = $_REQUEST['a'];
-					$apellido       = mysqli_real_escape_string($link, utf8_decode($_REQUEST['apellido']));
-					$nombre 	    = mysqli_real_escape_string($link, utf8_decode($_REQUEST['nombre']));
-					$dni			= mysqli_real_escape_string($link, $_REQUEST['dni']);
-					$especialidad   = mysqli_real_escape_string($link, utf8_decode($_REQUEST['especialidad']));
-					$hospital		= mysqli_real_escape_string($link, utf8_decode($_REQUEST['institucion']));
-					$situacion		= mysqli_real_escape_string($link, utf8_decode($_REQUEST['condicion']));
-					$telefono		= mysqli_real_escape_string($link, $_REQUEST['telefono']);
-					$mail			= mysqli_real_escape_string($link, $_REQUEST['email']);
-					$matricula		= mysqli_real_escape_string($link, $_REQUEST['matriculaNac']);
-					$matricula_prov = mysqli_real_escape_string($link, $_REQUEST['matriculaProv']);
-					$idCurso        = $_REQUEST['idEvento'];
-					$sql = "insert into participantes (Apellido,Nombre,Dni,especialidad,Hospital,Situacion,Telefono,Mail,Matricula,MatriculaProv) 
+				} else { 	// registramos en la base
+							$errorDB = false;
+							$link = mysqli_connect('localhost', 'uv9007', 'V*d*o*3037!','uv9007_registracionea');
+							if (mysqli_connect_errno()) {
+							$errorDB = true;
+							}
+							$action = $_REQUEST['a'];
+							$apellido       = mysqli_real_escape_string($link, utf8_decode($_REQUEST['apellido']));
+							$nombre 	    = mysqli_real_escape_string($link, utf8_decode($_REQUEST['nombre']));
+							$dni			= mysqli_real_escape_string($link, $_REQUEST['dni']);
+							$especialidad   = mysqli_real_escape_string($link, utf8_decode($_REQUEST['especialidad']));
+							$hospital		= mysqli_real_escape_string($link, utf8_decode($_REQUEST['institucion']));
+							$situacion		= mysqli_real_escape_string($link, utf8_decode($_REQUEST['condicion']));
+							$telefono		= mysqli_real_escape_string($link, $_REQUEST['telefono']);
+							$mail			= mysqli_real_escape_string($link, $_REQUEST['email']);
+							$matricula		= mysqli_real_escape_string($link, $_REQUEST['matriculaNac']);
+							$matricula_prov = mysqli_real_escape_string($link, $_REQUEST['matriculaProv']);
+
+							$idCurso = $_REQUEST['idEvento'];
+							$sql = "insert into participantes (Apellido,Nombre,Dni,especialidad,Hospital,Situacion,Telefono,Mail,Matricula,MatriculaProv) 
 							values('{$apellido}','{$nombre}','{$dni}','{$especialidad}','{$hospital}','{$situacion}','{$telefono}','{$mail}','{$matricula}','{$matricula_prov}')";
-					$res = mysqli_query($link,$sql);
-					//echo $sql;
-					$idParticipante = mysqli_insert_id($link);
-					
-					$sql = "insert into participantescursos (idParticipante,idCurso,asistio) 
+							$res = mysqli_query($link,$sql);
+							$idParticipante = mysqli_insert_id($link);
+
+							$sql = "insert into participantescursos (idParticipante,idCurso,asistio)
 							values({$idParticipante},'{$idCurso}','0')";
-					$res = mysqli_query($link,$sql);
-					//echo $sql;
-					// mandamos el mail
-					require("send/class.phpmailer.php");
-					$mail = new PHPMailer();
-					$mail->From = "contacto@comunidadresidentes.com.ar";
-					$mail->FromName = "Comunidad Medico Residente";
-					//$mail->AddAddress("osvaldo@globaldardos.com");
-					//$mail->AddAddress("adriang_1174@hotmail.com");
-					$mail->AddAddress("contacto@comunidadresidentes.com.ar");
-					$mail->WordWrap = 50;                                 // set word wrap to 50 characters
-					$mail->IsHTML(true);                                  // set email format to HTML
-					$mail->ContentType = "text/html";
-					$mail->CharSet = "UTF-8";
-					$mail->Subject = "Inscripcion de " . $_POST["nombre"] . " " . $_POST["apellido"];
-					$mail->Body = "<font face=Verdana, Arial, Helvetica, sans-serif color=#666666 size=2>
-					<strong>Nombre del Evento: </strong>" . $_POST["nombreEvento"] ."<br><br>
-					<strong>Nombre: </strong>" . $_POST["nombre"] ."<br>
-					<strong>Apellido: </strong>" . $_POST["apellido"] ."<br>
-					<strong>Telefono: </strong>" . $_POST["telefono"] . "<br>
-					<strong>Email: </strong>" . $_POST["email"] . "<br>
-					<strong>Nº Matricula - Nac.: </strong>" . $_POST["matriculaNac"] . "<br>
-					<strong>Nº Matricula - Prov.: </strong>" . $_POST["matriculaProv"] . "<br>
-					<strong>Condicion: </strong>" . $_POST["condicion"] . "<br>
-					<strong>Especialidad: </strong>" . $_POST["especialidad"] . "<br>
-					<strong>Institucion: </strong>" . $_POST["institucion"] . "<br>
-					<strong>Localidad: </strong>" . $_POST["localidad"] . "<br>
-					<strong>Provincia: </strong>" . $_POST["provincia"] . "<br>
-					</font>";
-					if ($errorDB)
-					{
-						$mail->Body .= "<br><strong>Atención: Se ha producido un error en la base de datos y esta inscripción no ha sido incorporada, salvo que el residente haya completado un nuevo formulario </strong>";
-					}
-					$mailOK = $mail->Send();
-					if(!$mailOK or $errorDB) {
-						echo "<script>  	populateEspec('');
+							$res = mysqli_query($link,$sql);
+							// mandamos el mail
+							require("send/class.phpmailer.php");
+							$mail = new PHPMailer();
+							$mail->From = "contacto@comunidadresidentes.com.ar";
+							$mail->FromName = "Comunidad Medico Residente";
+							//$mail->AddAddress("osvaldo@globaldardos.com");
+							$mail->AddAddress("contacto@comunidadresidentes.com.ar");
+							$mail->WordWrap = 50; // set word wrap to 50 characters
+							$mail->IsHTML(true); // set email format to HTML
+							$mail->ContentType = "text/html";
+							$mail->CharSet = "UTF-8";
+							$mail->Subject = "Inscripcion de " . $_POST["nombre"] . " " . $_POST["apellido"];
+							$mail->Body = "<font face=Verdana, Arial, Helvetica, sans-serif color=#666666 size=2>
+							<strong>Nombre del Evento: </strong>" . $_POST["nombreEvento"] ."<br><br>
+							<strong>Nombre: </strong>" . $_POST["nombre"] ."<br>
+							<strong>Apellido: </strong>" . $_POST["apellido"] ."<br>
+							<strong>Telefono: </strong>" . $_POST["telefono"] . "<br>
+							<strong>Email: </strong>" . $_POST["email"] . "<br>
+							<strong>Nº Matricula - Nac.: </strong>" . $_POST["matriculaNac"] . "<br>
+							<strong>Nº Matricula - Prov.: </strong>" . $_POST["matriculaProv"] . "<br>
+							<strong>Condicion: </strong>" . $_POST["condicion"] . "<br>
+							<strong>Especialidad: </strong>" . $_POST["especialidad"] . "<br>
+							<strong>Institucion: </strong>" . $_POST["institucion"] . "<br>
+							<strong>Localidad: </strong>" . $_POST["localidad"] . "<br>
+							<strong>Provincia: </strong>" . $_POST["provincia"] . "<br>
+							</font>";
+							if ($errorDB)
+							{
+								$mail->Body .= "<br><strong>Atención: Se ha producido un error en la base de datos y esta inscripción no ha sido incorporada, salvo que el residente haya completado un nuevo formulario </strong>";
+							}
+
+							$mailOK = $mail->Send();
+							if(!$mailOK or $errorDB) {
+											echo "<script>  	populateEspec('');
 											populateCond('');
 											populateInst('');
 											jAlert('<strong>Ha habido un problema con su inscipción.</strong>', 'Por favor intente nuevamente');
-							  </script>";
-					} else {	
-							echo "<script>location.href='http://www.comunidadresidentes.com.ar/inscripcion/gracias';</script>";
-					}
+											</script>";
+							} else {	
+									echo "<script>location.href='http://www.comunidadresidentes.com.ar/inscripcion/gracias';</script>";
+							}
 
-				}
+							}
 			}
 			else{
 					echo "<script>	populateEspec('');
@@ -585,6 +591,7 @@ function ponerProximosEventos() {
 								populateInst('');
 					  </script>";
 			}
+
 			?>
             
 			<?php if ((isset($_GET["evento"])) && ($_GET["evento"]=="gracias")) {
@@ -593,7 +600,8 @@ function ponerProximosEventos() {
 								populateInst('');
 								jAlert('<strong>El Formulario ha sido enviado correctamente.</strong>', 'Muchas gracias por inscribirse');
 					  </script>";
-            } ?>
+
+				} ?>
             
         <?php } else { ?>
         	
@@ -630,6 +638,10 @@ function ponerProximosEventos() {
     
 	<!-- Container Columna Derecha -->
     <div class="columnaDer">
+    	
+        <!-- Columna Der Proximo Evento -->
+        <a href="/2013/1rasJornadasDeLaAsociacionArgentinaDeRinologia" target="_blank" class="botonEventoProximo"></a> 
+    
     	<a href="https://www.facebook.com/ComunidadResidentesArgentina" target="_blank" class="botonComunidad"></a>
     	
         <?php if (!isset($_GET["aa"])) { ?>
@@ -639,17 +651,14 @@ function ponerProximosEventos() {
         	<div class="tit">Próximos eventos</div>
             <?php ponerProximosEventos() ?>
         </div>
-        <!-- Columna Der Suscribirse al News -->
-        <div class="widget">
-            <div class="tit">Suscribite a nuestro<br /><strong>Newsletter</strong></div>
-            <div class="newsletter">
-            	<input id="newsNombre" type="text" value="Nombre..." />
-                <input id="newsEmail" type="text" value="Email..." />
-                <div class="right">
-	                <div id="botonSuscribirse">Suscribirse</div>
-				</div>
-            </div>
-        </div>
+        
+        <?php } ?>
+
+       	<!-- Columna Der Suscribirse al News -->
+        <a href="http://eepurl.com/Ei4pz" target="_blank" class="botonNewsletter"></a> 
+       	
+        <?php if (!isset($_GET["aa"])) { ?>
+        
         <!-- Columna Der Redes Sociales -->
         <div class="widget">
             <div class="tit">formá parte de<br /><strong>nuestra comunidad!!!</strong></div>
@@ -659,8 +668,9 @@ function ponerProximosEventos() {
                 <!--<a href="#" target="_blank" class="botonRedes redesYoutube"></a>-->
             </div>
         </div>
-        
         <?php } ?>
+        
+        
         
     </div> <!-- Fin Columna Der -->
     

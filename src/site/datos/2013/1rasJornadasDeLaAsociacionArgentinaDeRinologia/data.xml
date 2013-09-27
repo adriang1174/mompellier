@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>1ra Jornada de la Asociación Argentina de Rinología y Cirugía Plástica Facial</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>1ra Jornada de la Asociación Argentina de Rinología y Cirugía Plástica Facial</subTitulo>
+	
+	<dia>11 y 12</dia>
+	<diaNombre></diaNombre>
+	<mes>Octubre</mes>
+	<ano>2013</ano>
+	
+	<lugar>Hotel Libertador - Tandil</lugar>
+	<lugarDireccion>Bartolomé Mitre 545 - Tandil, Buenos Aires.</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?safe=off&amp;ie=UTF8&amp;q=hotel+libertador+tandil+buenos+aires&amp;fb=1&amp;gl=ar&amp;hq=hotel+libertador&amp;hnear=0x95911f9b2733946f:0xceef2c76899c202d,Tandil,+Buenos+Aires&amp;cid=0,0,6697447621412767371&amp;t=m&amp;ll=-37.321899,-59.138567&amp;spn=0.008191,0.013711&amp;z=16&amp;iwloc=A&amp;output=embed</mapa>
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	
+	
+	<textoEvento><![CDATA[
+		<p><strong>Participar es muy simple</strong>, completá tus datos haciendo clic en el botón <strong>“INSCRIBITE”</strong>. Recibirás una confirmación.</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Directores" tamano="1_2" alto="50px">
+		<speaker>
+			<foto>drSantiago.jpg</foto>
+			<nombre>Dr. Santiago Magaró</nombre>
+		</speaker>
+		<speaker>
+			<foto>drFernando.jpg</foto>
+			<nombre>Dr. Fernando Monsalve</nombre>
+		</speaker>
+	</speakers>
+	
+
+	<speakers titulo="Disertantes" tamano="1_4" alto="50px">
+		<speaker>
+			<nombre>Dr. Miguel Cupitó</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Miguel Moscovicz</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Fernando Ané</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Isabel Kaimen</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Alejandro Terzián</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Hernan Chinski</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Carlos Marino</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Velia Rivelli</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Ernesto Desio</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Diego Gutiérrez</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Esteban Bercelini</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Eduardo Hocsman</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Diego Folgueiras</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Sebastián Sturla</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Fernando Monsalve</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Carlos Boccio</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Patricio Thomson</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Federico Urquiola</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Lic. Diana Laurnagaray</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Lic. Paola Gosso</nombre>
+		</speaker>
+	</speakers>
+	
+	
+	
+	<agenda titulo="Viernes 11 de octubre">
+		<item>
+			<hora>08:50 a 09:00 hs</hora>
+			<actividad>Palabras de bienvenida.</actividad>
+			<aclaracion>Dr. Miguel Moscovicz - Dr. Fernando Monsalve</aclaracion>
+		</item>
+		<item>
+			<hora>09:00 a 10:00 hs</hora>
+			<actividad>Síndrome del seno silente. </actividad>
+			<aclaracion>Dr. Miguel Moscovicz</aclaracion>
+		</item>
+		<item>
+			<hora>10:00 a 10:30 hs</hora>
+			<actividad>Casos que nos dejaron enseñanza en otología.</actividad>
+			<aclaracion>Dr. Esteban Bercelini</aclaracion>
+		</item>
+		<item>
+			<hora>10:30 a 11:00 hs</hora>
+			<actividad>Coffee break.</actividad>
+		</item>
+		<item>
+			<hora>11:00 a 11:30 hs</hora>
+			<actividad>Atelectasias de oído medio: ¿qué hago? ¿cómo? y ¿cuándo?.</actividad>
+			<aclaracion>Dr. Diego Gutiérrez</aclaracion>
+		</item>
+		<item>
+			<hora>11:30 a 12:00 hs</hora>
+			<actividad>Sinusitis odontógena.</actividad>
+			<aclaracion>Dr. Carlos Marino</aclaracion>
+		</item>
+		<item>
+			<hora>12:00 a 12:30 hs</hora>
+			<actividad>Fístula Antro bucal.</actividad>
+			<aclaracion>Dr. Diego Folgueiras</aclaracion>
+		</item>
+		<item>
+			<hora>12:30 a 13:00 hs</hora>
+			<actividad>Complicaciones Orbitarias en sinusitis.</actividad>
+			<aclaracion>Dr. Fernando Ané</aclaracion>
+		</item>
+		<item>
+			<hora>13:00 a 14:30 hs</hora>
+			<actividad>Receso.</actividad>
+		</item>
+		<item>
+			<hora>14:30 a 15:00 hs</hora>
+			<actividad>Soluciones a casos difíciles en audiología. Nuevas tecnologías.</actividad>
+			<aclaracion>Lic. Diana Laurnagaray - Lic. Paola Gosso - Coordinadora: Lic. Marcela Lancerotto</aclaracion>
+		</item>
+		<item>
+			<hora>15:00 a 15:30 hs</hora>
+			<actividad>Pequeños tips en cirugía del colesteatoma</actividad>
+			<aclaracion>Dr. Eduardo Hocsman</aclaracion>
+		</item>
+		<item>
+			<hora>15:30 a 16:00 hs</hora>
+			<actividad>Algias cráneo faciales.</actividad>
+			<aclaracion>Prof. Dr. Alejandro Terzian</aclaracion>
+		</item>
+		<item>
+			<hora>16:00 a 16:30 hs</hora>
+			<actividad>Laringitis por reflujo, estado actual.</actividad>
+			<aclaracion>Dr. Sebastián Sturla</aclaracion>
+		</item>
+		<item>
+			<hora>16:30 a 17:30 hs</hora>
+			<actividad>Mesa redonda rinoplastias.</actividad>
+			<aclaracion>Dr. Miguel Cupitó - Dr. Hernán Chinski - Dr. Fernando Monsalve</aclaracion>
+		</item>
+		<item>
+			<hora>17:30 a 18:00 hs</hora>
+			<actividad>Coffee break.</actividad>
+		</item>
+		<item>
+			<hora>18:00 a 18:30 hs</hora>
+			<actividad>Mesa redonda de residentes, Imágenes en rinología.</actividad>
+		</item>
+		<item>
+			<hora>18:30 a 19:00 hs</hora>
+			<actividad>Primeros pasos en rinoplastia.</actividad>
+			<aclaracion>Dra. Velia Rovelli</aclaracion>
+		</item>
+		<item>
+			<hora>19:00 a 21:00 hs</hora>
+			<actividad>Estudio del paciente para rinoplastia primaria.</actividad>
+			<aclaracion>Dr. Ernesto Desio</aclaracion>
+		</item>
+		<item>
+			<hora>21:00 hs</hora>
+			<actividad>Lunch de bienvenida - Hotel Libertador</actividad>
+		</item>
+	</agenda>
+	
+	<agenda titulo="Sábado 12 de octubre">
+		<item>
+			<hora>09:00 a 09:30 hs</hora>
+			<actividad>Cirugía endoscópica nasal técnica básica.</actividad>
+			<aclaracion>Dr. Patricio Thomson</aclaracion>
+		</item>
+		<item>
+			<hora>09:30 a 10:00 hs</hora>
+			<actividad>Otoesclerosis: consejos útiles y casos complejos.</actividad>
+			<aclaracion>Dr. Eduardo Hocsman</aclaracion>
+		</item>
+		<item>
+			<hora>10:00 a 10:30 hs</hora>
+			<actividad>Poliposis nasal.</actividad>
+			<aclaracion>Dra. Isabel Kaimen</aclaracion>
+		</item>
+		<item>
+			<hora>10:30 a 11:00 hs</hora>
+			<actividad>Coffee break.</actividad>
+		</item>
+		<item>
+			<hora>11:00 a 11:30 hs</hora>
+			<actividad>Roncopatía y saos, estado actual.</actividad>
+			<aclaracion>Dr. Carlos Boccio</aclaracion>
+		</item>
+		<item>
+			<hora>11:30 a 12:30 hs</hora>
+			<actividad>Mini conferencias de residentes. Urgencias en rinología.</actividad>
+		</item>
+		<item>
+			<hora>12:30 a 13:00 hs</hora>
+			<actividad>Valvulopatías.</actividad>
+			<aclaracion>Dr. Federico Urquiola</aclaracion>
+		</item>
+		<item>
+			<hora>13:00 hs</hora>
+			<actividad>Estética facial métodos y técnicas.</actividad>
+			<aclaracion>Dr. Miguel Cupitó</aclaracion>
+		</item>
+	</agenda>
+	
+	
+	<!-- Evento Realizado -->
+	<!--<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Salón El Greco la Jornada de Actualización en Osteoporósis</textoRealizado>-->
+	
+</data>

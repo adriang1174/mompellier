@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Segunda Jornada Académica del Consejo de Orientación de Medicina</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Segunda Jornada Académica del Consejo de Orientación (COrie) de Medicina. Facultad de Medicina, UBA</subTitulo>
+	
+	<dia>25 y 26</dia>
+	<diaNombre></diaNombre>
+	<mes>Octubre</mes>
+	<ano>2013</ano>
+	
+	<lugar>Salón El Greco</lugar>
+	<lugarDireccion>Av. Rivadavia 5353 - C. A. Bs. As.</lugarDireccion>
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=Sal%C3%B3n+El+Greco&amp;aq=&amp;sll=-34.593191,-58.417557&amp;sspn=0.007269,0.016512&amp;ie=UTF8&amp;hq=Sal%C3%B3n+El+Greco&amp;hnear=&amp;t=m&amp;cid=6455526517155667366&amp;ll=-34.608133,-58.439455&amp;spn=0.033909,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed</mapa>
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	
+	
+	<textoEvento><![CDATA[
+		<p style="font-weight:bold">Segunda Jornada Académica del Consejo de Orientación (COrie) de Medicina</p>
+		<p style="font-weight:bold">“De la Fisiopatología al Tratamiento”</p>
+		<p>Destinado a: Alumnos de 5º a 7º Año de Medicina</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Presidente" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Prof. Dr. Marcelo Melero</nombre>
+		</speaker>
+	</speakers>
+	
+
+	<speakers titulo="Secretarios" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Doc. Aut. Antonio Abdala</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Doc. Adsc. Héctor Carvallo</nombre>
+		</speaker>
+	</speakers>
+	
+	
+	
+	<agenda titulo="Viernes 25 de octubre">
+		<item>
+			<hora>08 a 09 hs</hora>
+			<actividad>Inscripción de los alumnos. Desayuno</actividad>
+		</item>
+		<item>
+			<hora>09:00 a 10:00 hs</hora>
+			<actividad>Conferencia (45 minutos) Neumonía Adquirida en la Comunidad</actividad>
+			<aclaracion>Prof. Titular Dr. Marcelo J. Melero. Preguntas del auditorio (15 minutos). Intervalo (10 minutos)</aclaracion>
+		</item>
+		<item>
+			<hora>10:10 a 11:10 hs</hora>
+			<actividad>Encuentros con el Profesor (60 minutos).</actividad>
+			<aclaracion><![CDATA[	<strong>a. El Paciente con un Nódulo Pulmonar.</strong> Prof. Adj. Dra. Cecilia Arévalo.<br>
+									<strong>b. El paciente con Fiebre.</strong> Prof. Adj. Dr. Pascual Valdés.<br>
+									<strong>c. El Paciente con Disnea.</strong> Prof. Adj. Dr. Hugo Catalano ]]></aclaracion>
+		</item>
+		<item>
+			<hora>11:20 a 11:50 hs</hora>
+			<actividad><![CDATA[ Presentación de Temas Libres (30 minutos)<br>Intervalo (10 minutos) ]]></actividad>
+		</item>
+		<item>
+			<hora>12:00 a 13:00 hs</hora>
+			<actividad>Conferencia (45 minutos)</actividad>
+			<aclaracion><![CDATA[ Un recorrido de 120 años en los mecanismos fisiopatológicos de la disnea<br>Prof. Titular Dr. Eduardo L. De Vito<br><strong>Preguntas del auditorio (15 minutos)</strong> ]]></aclaracion>
+		</item>
+		<item>
+			<hora>13:00 a 14:00 hs</hora>
+			<actividad>Intervalo/Almuerzo</actividad>
+		</item>
+		<item>
+			<hora>14:00 a 15:00 hs</hora>
+			<actividad>Conferencia (45 minutos)</actividad>
+			<aclaracion><![CDATA[ Enfermedad Coronaria Estable<br>Prof. Titular Dr. Manuel Vázquez Blanco<br>
+						<strong>Preguntas del auditorio (15 minutos)</strong><br>
+						<strong>Intervalo (10 minutos)</strong> ]]></aclaracion>
+		</item>
+		<item>
+			<hora>15:10 a 16:10 hs</hora>
+			<actividad>Encuentros con el Profesor (60 minutos)</actividad>
+			<aclaracion><![CDATA[	<strong>a. El Paciente con Abdomen Agudo</strong><br>
+									Prof. Adj. Dr. Horacio Di Fonzo<br>
+									<strong>b. El Paciente con Acidosis Metabólica</strong><br>
+									Prof. Adj. Dra. Sofía Fernández<br>
+									<strong>c. El Paciente con Hepatonecrosis</strong><br>
+									Prof. Adj. Dr. Juan Sordá<br>
+									<strong>Intervalo (10 minutos)</strong> ]]></aclaracion>
+		</item>
+		<item>
+			<hora>16:20 a 17:50 hs</hora>
+			<actividad><![CDATA[ Presentación de Temas Libres (30 minutos)<br>Intervalo (10 minutos) ]]></actividad>
+		</item>
+		<item>
+			<hora>17:00 a 18:00 hs</hora>
+			<actividad>Conferencia (45 minutos)</actividad>
+			<aclaracion><![CDATA[ 	Síndrome Ascítico Edematoso<br>
+									Prof. Titular Dr. Roberto H. Iérmoli<br>
+									<strong>Preguntas del auditorio (15 minutos)</strong> ]]></aclaracion>
+		</item>
+	</agenda>
+	
+	<agenda titulo="Sabado 26 de octubre">
+		<item>
+			<hora>08 a 09 hs</hora>
+			<actividad>Desayuno</actividad>
+		</item>
+		<item>
+			<hora>09:00 a 10:00 hs</hora>
+			<actividad>Conferencia (45 minutos)</actividad>
+			<aclaracion><![CDATA[	Insuficiencia Cardiaca
+									Prof. Titular Dr. José D. Piñieiro
+									<strong>Preguntas del auditorio (15 minutos)</strong>
+									<strong>Intervalo (10 minutos)</strong> ]]></aclaracion>
+		</item>
+		<item>
+			<hora>10:10 a 11:10 hs</hora>
+			<actividad>Encuentros con el Profesor (60 minutos) </actividad>
+			<aclaracion><![CDATA[	<strong>a. El Paciente con Hipertensión Arterial.</strong><br>
+									Prof. Adj. Dr. Norberto Cardozo.<br>
+									<strong>b. El Paciente con Hipertiroidismo.</strong><br>
+									Prof. Adj. Dra. Graciela E. Arévalo de Cross.<br>
+									<strong>c. El Paciente con un Accidente Cerebrovascular</strong><br>
+									Prof. Adj. Dr. Francisco Azzato. ]]></aclaracion>
+		</item>
+		<item>
+			<hora>11:20 a 11:50 hs</hora>
+			<actividad><![CDATA[ Presentación de Temas Libres (30 minutos)<br>Intervalo (10 minutos) ]]></actividad>
+		</item>
+		<item>
+			<hora>12:00 a 13:00 hs</hora>
+			<actividad>Conferencia (45 minutos)</actividad>
+			<aclaracion><![CDATA[	Exacerbación de la Enfermedad Pulmonar Obstructiva Crónica<br>
+									Prof. Titular Dr. Luis A. Solari<br>
+									<strong>Preguntas del auditorio (15 minutos)</strong> ]]></aclaracion>
+		</item>
+		<item>
+			<hora>13:00 a 14:00 hs</hora>
+			<actividad>Brindis</actividad>
+			<aclaracion>Fin de las Segundas Jornadas Académicas del COrie de Medicina. Se otorgarán Certificados de Asistencia y de Participación en los Temas Libres</aclaracion>
+		</item>
+	</agenda>
+	
+	
+	<!-- Evento Realizado -->
+	<!--<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Salón El Greco la Jornada de Actualización en Osteoporósis</textoRealizado>-->
+	
+</data>
