@@ -290,6 +290,14 @@ function ponerProximosEventos() {
 	}
 }
 
+function inscripcionAbierta() {
+	//Indica si esta la inscripcion abierta para el evento
+	global $doc;
+	if($doc->getElementsByTagName('inscripcion')->item(0)->nodeValue == "1")
+		return true;
+	else 
+		return false;
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -389,6 +397,10 @@ function ponerProximosEventos() {
             </a>
             <?php ponerTituloEvento() ?>
             <?php ponerLugarFecha() ?>
+            <?php if(inscripcionAbierta())
+			      { ?>
+						<a href="<?php root().$_GET['aa']."/".$_GET['evento']."/" ?>inscripcion" class="botonInscribite"></a>
+			<?php } ?>
             <div class="botonComparti" style="top:122px; -webkit-border-radius: 5px; border-radius: 5px;">
             	<span>Compartí</span>
             	<!-- AddThis Button BEGIN -->
@@ -413,8 +425,10 @@ function ponerProximosEventos() {
             </div>
             <?php ponerTituloEvento() ?>
             <?php ponerLugarFecha() ?>
-            
-            <a href="<?php root() ?>inscripcion" class="botonInscribite"></a>
+            <?php if(inscripcionAbierta())
+			      { ?>
+						<a href="<?php root().$eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue."/" ?>inscripcion" class="botonInscribite"></a>
+			<?php } ?>
 			<div class="botonComparti">
             	<span>Compartí</span>
             	<!-- AddThis Button BEGIN -->
@@ -436,7 +450,7 @@ function ponerProximosEventos() {
     <!-- Container Columna izq -->    
     <div class="columnaIzq">
     
-    	<?php if ((isset($_GET["aa"])) && ($_GET["aa"]=="inscripcion")) { ?>
+    	<?php if ($_GET["accion"]=="inscripcion") { ?>
         
         	<!-- Formulario de Inscripcion -->
             <div class="bloque formulario">
@@ -472,7 +486,13 @@ function ponerProximosEventos() {
                 	<span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
                     <span>Provincia</span><input id="provincia" name="provincia" type="text" class="campo" />
                     <input id="nombreEvento" name="nombreEvento" type="hidden" value="<?php nombreEvento() ?>" />
-					<input id="idEvento" name="idEvento" type="hidden" value="<?= $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue ?>" />
+				<?php
+				if (isset($_GET["aa"]))
+						$idEvento = $_GET["aa"]."/".$_GET["evento"];
+				else
+						$idEvento = $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue;
+				?>
+					<input id="idEvento" name="idEvento" type="hidden" value="<?= $idEvento ?>" />
 				</p>
                 <?php require_once('recaptcha-php-1.11/recaptchalib.php');
 				$publickey = " 	6LeSE-USAAAAAGHq9mrDbk3OjeJU54R4Jo0LJfHM "; // you got this from the signup page
@@ -580,7 +600,7 @@ function ponerProximosEventos() {
 											jAlert('<strong>Ha habido un problema con su inscipción.</strong>', 'Por favor intente nuevamente');
 											</script>";
 							} else {	
-									echo "<script>location.href='http://www.comunidadresidentes.com.ar/inscripcion/gracias';</script>";
+									echo "<script>location.href='http://www.comunidadresidentes.com.ar/".$idEvento."/gracias';</script>";
 							}
 
 							}
@@ -594,8 +614,9 @@ function ponerProximosEventos() {
 
 			?>
             
-			<?php if ((isset($_GET["evento"])) && ($_GET["evento"]=="gracias")) {
-				echo "<script>	populateEspec('');
+			<?php if ($_GET["accion"]=="gracias") {
+					//Acá hay que mandar el mail de confirmación
+					echo "<script>	populateEspec('');
 								populateCond('');
 								populateInst('');
 								jAlert('<strong>El Formulario ha sido enviado correctamente.</strong>', 'Muchas gracias por inscribirse');
