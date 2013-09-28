@@ -79,7 +79,7 @@ sino
 //////////
 
 <!-- Container Columna Derecha -->
-Boton evento proximo
+Boton evento próximo
 Boton comunidad
 Si no esta seteado aa 
 	<!-- Columna Der Proximos Eventos --> ponerProximosEventos
@@ -89,3 +89,11 @@ Si no esta seteado aa
 Si no está seteado aa
 	<!-- Container Eventos Realizados --> ponerEventosRealizados, ponerNumeracionRealizados
 Footer
+
+-----------
+XMl - botón inscribirse desde el xml, tiene que manejar activo si/no
+
+botón inscribirse debe enviar a /aa/evento/inscripcion --> inscripción per parámetro 
+
+Modificar índex para manejar la navegabilidad con 3 parámetros.
+
