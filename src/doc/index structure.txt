@@ -1,0 +1,60 @@
+
+Armado del html
+Si está seteado aa
+	Si accion = inscripcion
+		pone <!-- Container Header --> con botón volver y boton de inscripcion
+	sino
+		pone <!-- Container Header --> con botón volver, no pone el boton de inscripcion	
+sino
+	Si accion = inscripcion
+			pone <!-- Container Header --> con titulo "proximo evento" y botón de inscripción
+	sino
+			pone <!-- Container Header --> con titulo "proximo evento" sin botón de inscripcion	
+
+<!-- Container Columna izq -->
+Si accion = inscripcion
+	pone <!-- Formulario de Inscripcion -->
+	Si se hizo POST
+		Valida captcha
+		Si captcha no es valido
+			alert de error de captcha
+		sino
+			registra en la base
+			Si hay error DB
+				pone msj error
+			envia mail
+			Si el mail no se envio o hay error DB
+				vuelve a popular los lists
+				alert de error
+			sino
+				redirecciona a gracias
+	sino
+		popula los lists
+	Si accion = gracias
+		popula los lists
+		alert de gracias
+sino
+	Si no esta seteado aa
+		pone bloque texto principal
+		<!-- Columna Izq Lugar y Fecha --> ponerLugarFechaContent
+		<!-- Columna Izq fotos --> ponerLugarFotos
+		<!-- Columna Izq texto --> ponerTextoEvento
+		<!-- Columna Izq Speakers --> ponerSpeakers
+		<!-- Columna Izq Agenda --> ponerAlmanaque, ponerAgenda
+		<!-- Fin Columna Izq -->
+///////////
+////////// Revisar lógica columna derecha, con index productivo
+//////////
+
+<!-- Container Columna Derecha -->
+Boton evento proximo
+Boton comunidad
+Si no esta seteado aa
+	<!-- Columna Der Proximos Eventos --> ponerProximosEventos
+<!-- Columna Der Suscribirse al News -->
+Si no esta seteado aa
+	<!-- Columna Der Redes Sociales -->
+<!-- Fin Columna Der -->
+Si no está seteado aa
+	<!-- Container Eventos Realizados --> ponerEventosRealizados, ponerNumeracionRealizados
+Footer
