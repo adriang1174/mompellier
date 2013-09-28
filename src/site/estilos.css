@@ -294,7 +294,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 #container .columnaIzq .bloque img {
 	display:inline-block;
-	margin:0px 10px 0px 0px;
+	margin:0px 10px 10px 0px;
 }
 
 #container .columnaIzq .speakers {
@@ -458,6 +458,23 @@ font-family:Arial, Helvetica, sans-serif;
 #container .columnaDer .botonComunidad:hover {
 	background-position: bottom;
 }
+
+#container .columnaDer .botonNewsletter {
+	background:url(img/botonNewsletter.jpg) no-repeat top;
+	display:block;
+	height:126px;
+	margin-bottom:20px;
+}
+#container .columnaDer .botonEventoProximo {
+	background:url(img/botonEventoProximo.png) no-repeat top;
+	display:block;
+	height:281px;
+	margin-bottom:20px;
+}
+#container .columnaDer .botonNewsletter:hover, #container .columnaDer .botonEventoProximo:hover {
+	background-position: bottom;
+}
+
 
 
 #container .columnaDer .widget {
@@ -744,7 +761,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5abc53', end
 	text-align:center;
 	padding:50px 0px;
 }
-#footer .contenido .col {
+#footer .contenido .col, #legalesDiv {
 	padding:0px 47px;
 	height:170px;
 	display:inline-block;

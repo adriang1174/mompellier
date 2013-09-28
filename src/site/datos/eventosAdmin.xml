@@ -2,12 +2,15 @@
 <data>
 	
 	<!-- Evento Actual -->
-	<actual>2013/jornadaDeActualizacionEnOsteoporosis</actual>
+	<actual>2013/SegundasJornadasAcademicas</actual>
 	
 	<!-- Eventos Proximos -->
-	<proximo>2013/jornadaDeActualizacionEnOsteoporosis</proximo>
+	<proximo>2013/1rasJornadasDeLaAsociacionArgentinaDeRinologia</proximo>
+	<proximo>2013/SegundasJornadasAcademicas</proximo>
+	<proximo>2013/jornadasDelNOAargentino</proximo>
 
 	<!-- Eventos Realizados -->
+	<realizado>2013/jornadaDeActualizacionEnOsteoporosis</realizado>
 	<realizado>2013/1erEncuentroNacionalDeEndocrinologosEnFormacion</realizado>
 	
 	<realizado>2012/2ndoEncuentroDeResidentesDelInteriorDelPais</realizado>

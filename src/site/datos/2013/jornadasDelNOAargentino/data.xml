@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Jornadas del NOA Argentino</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Jornadas del NOA Argentino. Actualización, un Paradigma Siempre Vigente en la Educación Médica.</subTitulo>
+	
+	<dia>18 y 19</dia>
+	<diaNombre></diaNombre>
+	<mes>Octubre</mes>
+	<ano>2013</ano>
+	
+	<lugar>Tucumán</lugar>
+	<lugarDireccion><![CDATA[Garden Park Suites & Eventos - Salón Le Parc - Av. Soldati 330]]></lugarDireccion>
+
+	
+	
+	
+	<mapa>https://maps.google.com.ar/maps?safe=off&amp;ie=UTF8&amp;q=Hotel+Garden+Park&amp;fb=1&amp;gl=ar&amp;hq=Garden+Park+Suites+%26+Eventos&amp;cid=0,0,6685131994573050436&amp;ll=-26.828297,-65.193458&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed</mapa>
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	
+	
+	<textoEvento><![CDATA[
+		<p><strong>Participar es muy simple</strong>, completá tus datos haciendo clic en el botón <strong>“INSCRIBITE”</strong>. Recibirás una confirmación.</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Presidente de Honor" tamano="1_2" alto="50px">
+		<speaker>
+			<nombre>Dr. Demetrio Mateo Martínez</nombre>
+		</speaker>
+	</speakers>
+	
+
+	<speakers titulo="Presidentes" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Prof. Dra. Susana Miceli</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Prof. Dr. Guillermo Roccatagliata</nombre>
+		</speaker>
+	</speakers>
+	
+	<speakers titulo="Director Científico" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Dr. Alberto Sabino Valentini</nombre>
+		</speaker>
+	</speakers>
+	
+	
+	
+	<agenda titulo="Viernes 18 de octubre">
+		<item>
+			<hora>14:00 hs</hora>
+			<actividad>Apertura</actividad>
+		</item>
+		<item>
+			<hora>14:15 hs</hora>
+			<actividad><![CDATA[ Actualización terapéutica en DBT Mellitus tipo ll<br>Cuando disminuir la glucemia no es el único objetivo.]]></actividad>
+			<aclaracion><![CDATA[ Dra. Alejandra Isabel Oviedo<br>- Médica Especialista en Clínica Médica, Nutrición y Diabetes.<br>- Coordinadora del Servicio de Nutrición y Diabetes del Htal. D. F. Santojanni.<br>- Docente de la UBA en Nutrición y Diabetes.]]></aclaracion>
+		</item>
+		<item>
+			<hora>15:15 hs</hora>
+			<actividad><![CDATA[ Un enfoque actual sobre la evaluación del Riesgo Cardiovascular y Factores de Riesgo.]]></actividad>
+			<aclaracion><![CDATA[ Dr. Oscar Caravello<br>- Médico especialista en Clínica Médica y en Cardiologia.<br>- Médico de la División Clínica Médica del Htal D. F. Santojanni.<br>Coordinador del Grupo de Trabajo en HTA y Factores de Riesgo<br>- Cardiovasculares en el Htal. D. F. Santojanni. ]]></aclaracion>
+		</item>
+		<item>
+			<hora>16:15 hs</hora>
+			<actividad>Coffee break.</actividad>
+		</item>
+		<item>
+			<hora>16:45 hs</hora>
+			<actividad><![CDATA[ HIV/SIDA - Novedades y su impacto en la práctica diaria. ]]></actividad>
+			<aclaracion><![CDATA[ Dr. Pablo G. Scapellatto <br>- Médico Infectólogo.<br>- A/C de la Unidad de Infectología y Control de Infecciones del Htal. D. F. Santojanni. <br>- Prof. Adjunto de Enf. Infecciosas de la Univ. Favaloro. ]]></aclaracion>
+		</item>
+		<item>
+			<hora>17:45 hs</hora>
+			<actividad>Preguntas.</actividad>
+		</item>		
+	</agenda>
+	
+	<agenda titulo="Sábado 19 de octubre">
+		<item>
+			<hora>09:00 hs</hora>
+			<actividad>Impacto de la globalización, los viajes y las enfermedades emergentes en la práctica clínica cotidiana.</actividad>
+			<aclaracion><![CDATA[ Dra. Susana Lloveras<br>- Médica Especialista en Clínica Médica y en Infectología.<br>- Médica infectóloga del Centro Municipal de Patologías Regionales Argentinas y Medicina Tropical del Htal. F. J. Muniz.<br>- Secretaria de la Comisión Directiva de la Sociedad Latinoamericana de Medicina del Viajero.<br>- Docente de la Cátedra de Enf. Infecciosas - UBA.]]></aclaracion>
+		</item>
+		<item>
+			<hora>10:00 hs</hora>
+			<actividad>Coffee break.</actividad>
+		</item>
+		<item>
+			<hora>10.30 hs</hora>
+			<actividad><![CDATA[ Actualización del Calendario Nacional de Inmunizaciones en Argentina, en población pediátrica y adulta. ]]></actividad>
+			<aclaracion><![CDATA[ Dra. Julia Bakir<br>- Médica Pediatra de la División Promoción y Protección de la Salud del Htal. de Niños Dr. Ricardo Gutierrez.<br>- Integrante del Comité de Infecciones del Htal. de Niños Dr. Ricardo Gutierrez.<br>- Docente del Curso de Postgrado en Actualización en Inmunizaciones<br>- Programa de Inmunizaciones del GCBA. ]]></aclaracion>
+		</item>
+		<item>
+			<hora>11:30 hs</hora>
+			<actividad>Preguntas.</actividad>
+		</item>
+		<item>
+			<hora>12:00 hs</hora>
+			<actividad>Palabras de cierre.</actividad>
+		</item>
+	</agenda>
+	
+	
+	
+	<!-- Evento Realizado -->
+	<!--<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Salón El Greco la Jornada de Actualización en Osteoporósis</textoRealizado>-->
+	
+</data>
