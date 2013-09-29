@@ -85,7 +85,7 @@ function enviarNews() {
 function populateEspec(seltxt)
 {
 	//Populate especialidad dropdown
-	$.post("../db.php", {
+	$.post("/db.php", {
 	  a : "get_spec" },
 	  function(data) {
 		var sel = $("#especialidad");
@@ -104,7 +104,7 @@ function populateEspec(seltxt)
 
 function populateCond(seltxt)
 {
-	$.post("../db.php", {
+	$.post("/db.php", {
 	  a : "get_sit" },
 	  function(data) {
 		var sel = $("#condicion");
@@ -123,7 +123,7 @@ function populateCond(seltxt)
 
 function populateInst(seltxt)
 {
-	$.post("../db.php", {
+	$.post("/db.php", {
 	  a : "get_inst" },
 	  function(data) {
 		var sel = $("#institucion");

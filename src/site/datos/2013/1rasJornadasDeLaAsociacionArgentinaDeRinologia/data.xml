@@ -20,7 +20,7 @@
 	<lugarFoto>lugar2.jpg</lugarFoto>
 	<lugarFoto>lugar3.jpg</lugarFoto>
 	
-	
+	<inscripcion>1</inscripcion>
 	<textoEvento><![CDATA[
 		<p><strong>Participar es muy simple</strong>, completá tus datos haciendo clic en el botón <strong>“INSCRIBITE”</strong>. Recibirás una confirmación.</p>
 	]]></textoEvento>

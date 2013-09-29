@@ -1,6 +1,7 @@
 <?php
 
 $link =  mysqli_connect('localhost', 'uv9007', 'V*d*o*3037!','uv9007_registracionea');
+
 /* check connection */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -8,6 +9,7 @@ if (mysqli_connect_errno()) {
 }
 
 $action         = $_REQUEST['a'];
+/*
 $apellido       = $_REQUEST['apellido'];
 $nombre 	    = $_REQUEST['nombre'];
 $dni			= $_REQUEST['dni'];
@@ -19,7 +21,7 @@ $mail			= $_REQUEST['email'];
 $matricula		= $_REQUEST['matriculaNac'];
 $matricula_prov = $_REQUEST['matriculaProv'];
 $idCurso        = $_REQUEST['idEvento'];
-
+*/
 switch($action){
 	case 'get_spec':
 					$res = mysqli_query($link,"SELECT * FROM especialidades order by Descripcion");
@@ -31,7 +33,7 @@ switch($action){
 					}
 					break;
 	case 'get_sit':
-					$res = mysqli_query($link,"SELECT * FROM situaciones order by descripcion");
+					$res = mysqli_query($link,"SELECT distinct descripcion FROM situaciones order by descripcion");
 					while ($row = mysqli_fetch_array($res)) {
 					  $result[] = array(
 						'id' => utf8_encode($row['descripcion']),

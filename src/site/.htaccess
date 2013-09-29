@@ -2,5 +2,6 @@ RewriteEngine on
 
 RewriteRule  ^(\w+)$ index.php?aa=$1
 RewriteRule  ^(\w+)/(\w+)$ index.php?aa=$1&evento=$2
+RewriteRule  ^(\w+)/(\w+)/(\w+)$ index.php?aa=$1&evento=$2&accion=$3
 AuthUserFile "/home/uv9007/.htpasswds/public_html/passwd"
 AuthName "Montpe"

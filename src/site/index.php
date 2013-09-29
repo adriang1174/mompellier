@@ -1,4 +1,8 @@
 <?php
+if (isset($_GET["accion"]))
+	$accion = $_GET["accion"];
+else
+	$accion = "home" ;
 $eventosTodos = new DOMDocument();
 $eventosTodos->load( 'datos/eventosAdmin.xml' );
 
@@ -290,10 +294,18 @@ function ponerProximosEventos() {
 	}
 }
 
+function ponerBotonProximo() {
+global $eventosTodos;
+echo  '<a href="'.$eventosTodos->getElementsByTagName('botonProximo')->item(0)->nodeValue.'" target="_blank" class="botonEventoProximo"></a> ';
+}
+
 function inscripcionAbierta() {
 	//Indica si esta la inscripcion abierta para el evento
 	global $doc;
-	if($doc->getElementsByTagName('inscripcion')->item(0)->nodeValue == "1")
+	global $accion;
+	//$inscripcion = 	(!empty($doc->getElementsByTagName('inscripcion')))?$doc->getElementsByTagName('inscripcion')->item(0)->nodeValue:"0";
+	$inscripcion = $doc->getElementsByTagName('inscripcion')->item(0)->nodeValue;
+	if($inscripcion == "1" and $accion=="home")
 		return true;
 	else 
 		return false;
@@ -386,50 +398,35 @@ function inscripcionAbierta() {
 
 <!-- Container -->
 <div id="container">
-	
-    
-    <?php if (isset($_GET["aa"])) { ?>
+	    
         <!-- Container Header -->
         <div class="header" style="background-image:url(<?php root() ?><?php ponerHeaderImg() ?>)">
             <div class="sombra"></div>
-            <a class="pestana" href="/">
+    <?php if (isset($_GET["aa"])) { ?>   
+		     <a class="pestana" href="/">
                 <div class="left"></div><div class="middle"><div class="texto">&laquo; volver</div></div><div class="right"></div>
-            </a>
-            <?php ponerTituloEvento() ?>
-            <?php ponerLugarFecha() ?>
-            <?php if(inscripcionAbierta())
-			      { ?>
-						<a href="<?php root().$_GET['aa']."/".$_GET['evento']."/" ?>inscripcion" class="botonInscribite"></a>
-			<?php } ?>
-            <div class="botonComparti" style="top:122px; -webkit-border-radius: 5px; border-radius: 5px;">
-            	<span>Compartí</span>
-            	<!-- AddThis Button BEGIN -->
-                <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-                <a class="addthis_button_facebook"></a>
-                <a class="addthis_button_twitter"></a>
-                <a class="addthis_button_google_plusone_share"></a>
-                <a class="addthis_button_linkedin"></a>
-                <a class="addthis_button_email"></a>
-                </div>
-                <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51e975a969dbd262"></script>
-                <!-- AddThis Button END -->
-            </div>
-        </div>
+            </a>         
     <?php } else { ?>
-    	<!-- Container Header -->
-        <div class="header" style="background-image:url(<?php root() ?><?php ponerHeaderImg() ?>)">
-            <div class="sombra"></div>
             <div class="pestana">
                 <div class="left"></div><div class="middle"><div class="texto">próximo evento</div></div><div class="right"></div>
-            </div>
+            </div>    
+	<?php } ?>                                    
             <?php ponerTituloEvento() ?>
             <?php ponerLugarFecha() ?>
-            <?php if(inscripcionAbierta())
+            <?php if(inscripcionAbierta() and isset($_GET["aa"])) 
 			      { ?>
-						<a href="<?php root().$eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue."/" ?>inscripcion" class="botonInscribite"></a>
-			<?php } ?>
-			<div class="botonComparti">
+						<a href="<?php echo $root.$_GET['aa']."/".$_GET['evento']."/" ?>inscripcion" class="botonInscribite"></a>
+			<?php } 
+				  if(inscripcionAbierta() and !isset($_GET["aa"])) 
+				  { ?>
+						<a href="<?php echo $root.$eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue."/" ?>inscripcion" class="botonInscribite"></a>				  
+			<?php } ?>						
+            <?php if(inscripcionAbierta()) 
+			      { ?>
+            			<div class="botonComparti">
+            <?php }else{ ?>
+                        <div class="botonComparti" style="top:122px; -webkit-border-radius: 5px; border-radius: 5px;">
+            <?php } ?>
             	<span>Compartí</span>
             	<!-- AddThis Button BEGIN -->
                 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -444,17 +441,22 @@ function inscripcionAbierta() {
                 <!-- AddThis Button END -->
             </div>
         </div>
-	<?php } ?>
-    
     
     <!-- Container Columna izq -->    
     <div class="columnaIzq">
     
-    	<?php if ($_GET["accion"]=="inscripcion") { ?>
+    	<?php 
+    		if ($accion=="inscripcion" or $accion=="gracias") { ?>
         
         	<!-- Formulario de Inscripcion -->
             <div class="bloque formulario">
-           		<form action="/inscripcion" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise">
+				<?php
+				if (isset($_GET["aa"]))
+						$idEvento = $_GET["aa"]."/".$_GET["evento"];
+				else
+						$idEvento = $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue;
+				?>
+           		<form action="/<?= $idEvento ?>/inscripcion" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise">
 				<div class="titulo" style="margin-bottom:20px">Formulario de Inscripción</div>
                 <p>
                 	<span>Nombre</span><input id="nombre" name="nombre" type="text" class="campo" />
@@ -486,12 +488,6 @@ function inscripcionAbierta() {
                 	<span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
                     <span>Provincia</span><input id="provincia" name="provincia" type="text" class="campo" />
                     <input id="nombreEvento" name="nombreEvento" type="hidden" value="<?php nombreEvento() ?>" />
-				<?php
-				if (isset($_GET["aa"]))
-						$idEvento = $_GET["aa"]."/".$_GET["evento"];
-				else
-						$idEvento = $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue;
-				?>
 					<input id="idEvento" name="idEvento" type="hidden" value="<?= $idEvento ?>" />
 				</p>
                 <?php require_once('recaptcha-php-1.11/recaptchalib.php');
@@ -540,7 +536,7 @@ function inscripcionAbierta() {
 							if (mysqli_connect_errno()) {
 							$errorDB = true;
 							}
-							$action = $_REQUEST['a'];
+							//$action = $_REQUEST['a'];
 							$apellido       = mysqli_real_escape_string($link, utf8_decode($_REQUEST['apellido']));
 							$nombre 	    = mysqli_real_escape_string($link, utf8_decode($_REQUEST['nombre']));
 							$dni			= mysqli_real_escape_string($link, $_REQUEST['dni']);
@@ -566,7 +562,6 @@ function inscripcionAbierta() {
 							$mail = new PHPMailer();
 							$mail->From = "contacto@comunidadresidentes.com.ar";
 							$mail->FromName = "Comunidad Medico Residente";
-							//$mail->AddAddress("osvaldo@globaldardos.com");
 							$mail->AddAddress("contacto@comunidadresidentes.com.ar");
 							$mail->WordWrap = 50; // set word wrap to 50 characters
 							$mail->IsHTML(true); // set email format to HTML
@@ -593,6 +588,33 @@ function inscripcionAbierta() {
 							}
 
 							$mailOK = $mail->Send();
+							// mandamos el mail de confirmacion
+							$mail = new PHPMailer();
+							$mail->From = "contacto@comunidadresidentes.com.ar";
+							$mail->FromName = "Comunidad Medico Residente";
+							$mail->AddAddress($_POST["email"]);
+							$mail->WordWrap = 50; // set word wrap to 50 characters
+							$mail->IsHTML(true); // set email format to HTML
+							$mail->ContentType = "text/html";
+							$mail->CharSet = "UTF-8";
+							$mail->Subject = "Confirmación de Inscripcion";
+							// Retrieve the email template required 
+							$message = file_get_contents('http://www.comunidadresidentes.com.ar/mailing/confirmacion/index.html'); 
+							$nombre = $_POST["nombre"]." ".$_POST["apellido"];
+							$titulo_evento = $doc->getElementsByTagName('subTitulo')->item(0)->textContent;
+							$fecha_evento = $doc->getElementsByTagName('diaNombre')->item(0)->textContent.' '.$doc->getElementsByTagName('dia')->item(0)->textContent.' de '.$doc->getElementsByTagName('mes')->item(0)->textContent.' de '.$doc->getElementsByTagName('ano')->item(0)->textContent;
+							$lugar = $doc->getElementsByTagName('lugar')->item(0)->textContent;
+							$lugarDireccion = $doc->getElementsByTagName('lugarDireccion')->item(0)->textContent;
+							// Replace the % with the actual information 
+							$message = str_replace('%nombre%', $nombre, $message); 
+							$message = str_replace('%titulo_evento%', $titulo_evento, $message); 
+							$message = str_replace('%fecha_evento%', $fecha_evento, $message); 
+							$message = str_replace('%lugar%', $lugar, $message); 
+							$message = str_replace('%lugarDireccion%', $lugarDireccion, $message); 
+							//Set the message 
+							$mail->Body = $message; 
+							//$mail->AltBody(strip_tags($message)); 
+							$mail->Send();
 							if(!$mailOK or $errorDB) {
 											echo "<script>  	populateEspec('');
 											populateCond('');
@@ -614,8 +636,7 @@ function inscripcionAbierta() {
 
 			?>
             
-			<?php if ($_GET["accion"]=="gracias") {
-					//Acá hay que mandar el mail de confirmación
+			<?php if ($accion=="gracias") {
 					echo "<script>	populateEspec('');
 								populateCond('');
 								populateInst('');
@@ -661,8 +682,7 @@ function inscripcionAbierta() {
     <div class="columnaDer">
     	
         <!-- Columna Der Proximo Evento -->
-        <a href="/2013/1rasJornadasDeLaAsociacionArgentinaDeRinologia" target="_blank" class="botonEventoProximo"></a> 
-    
+        <?php ponerBotonProximo() ?>
     	<a href="https://www.facebook.com/ComunidadResidentesArgentina" target="_blank" class="botonComunidad"></a>
     	
         <?php if (!isset($_GET["aa"])) { ?>
