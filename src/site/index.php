@@ -590,7 +590,16 @@ function inscripcionAbierta() {
 							$mailOK = $mail->Send();
 							// mandamos el mail de confirmacion
 							$mail = new PHPMailer();
-							$mail->From = "contacto@comunidadresidentes.com.ar";
+							//This is SMTP settings
+							$mail->IsSMTP();
+							$mail->SMTPAuth = true;
+							$mail->SMTPSecure = "ssl";
+							$mail->Host = "smtp.zoho.com";
+							$mail->Port = 465;
+							$mail->Username = "info@comunidadresidentes.com.ar";
+							$mail->Password = "Residentes*123";
+							//End SMTP settings
+							$mail->From = "info@comunidadresidentes.com.ar";
 							$mail->FromName = "Comunidad Medico Residente";
 							$mail->AddAddress($_POST["email"]);
 							$mail->WordWrap = 50; // set word wrap to 50 characters

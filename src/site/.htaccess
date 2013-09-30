@@ -1,5 +1,6 @@
 RewriteEngine on
 
+RewriteRule  ^inscripcion$ index.php?aa=2013&evento=SegundasJornadasAcademicas&accion=inscripcion
 RewriteRule  ^(\w+)$ index.php?aa=$1
 RewriteRule  ^(\w+)/(\w+)$ index.php?aa=$1&evento=$2
 RewriteRule  ^(\w+)/(\w+)/(\w+)$ index.php?aa=$1&evento=$2&accion=$3
