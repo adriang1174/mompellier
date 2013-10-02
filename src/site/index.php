@@ -296,7 +296,7 @@ function ponerProximosEventos() {
 
 function ponerBotonProximo() {
 global $eventosTodos;
-echo  '<a href="'.$eventosTodos->getElementsByTagName('botonProximo')->item(0)->nodeValue.'" target="_blank" class="botonEventoProximo"></a> ';
+echo  '<a href="/'.$eventosTodos->getElementsByTagName('botonProximo')->item(0)->nodeValue.'" target="_blank" class="botonEventoProximo"></a> ';
 }
 
 function inscripcionAbierta() {
@@ -590,7 +590,15 @@ function inscripcionAbierta() {
 							$mailOK = $mail->Send();
 							// mandamos el mail de confirmacion
 							$mail = new PHPMailer();
-							$mail->From = "contacto@comunidadresidentes.com.ar";
+//							$mail->IsSMTP();
+//							$mail->SMTPDebug = 0;
+//							$mail->SMTPAuth   = true;
+//							$mail->SMTPSecure = 'ssl';		
+//							$mail->Host       = "smtp.zoho.com";
+//							$mail->Port       = 465;
+//							$mail->Username   = "info@comunidadresidentes.com.ar";
+//							$mail->Password   = "Residentes*123";
+							$mail->From = "info@comunidadresidentes.com.ar";
 							$mail->FromName = "Comunidad Medico Residente";
 							$mail->AddAddress($_POST["email"]);
 							$mail->WordWrap = 50; // set word wrap to 50 characters
