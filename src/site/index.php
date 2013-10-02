@@ -572,6 +572,7 @@ function inscripcionAbierta() {
 							<strong>Nombre del Evento: </strong>" . $_POST["nombreEvento"] ."<br><br>
 							<strong>Nombre: </strong>" . $_POST["nombre"] ."<br>
 							<strong>Apellido: </strong>" . $_POST["apellido"] ."<br>
+							<strong>Dni: </strong>" . $_POST["dni"] ."<br>
 							<strong>Telefono: </strong>" . $_POST["telefono"] . "<br>
 							<strong>Email: </strong>" . $_POST["email"] . "<br>
 							<strong>Nº Matricula - Nac.: </strong>" . $_POST["matriculaNac"] . "<br>
