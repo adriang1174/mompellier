@@ -131,7 +131,6 @@ p {
 	font-size: 26px;
 	font-style:italic;
 	color:#FFF;
-	text-transform:uppercase;
 	text-shadow: 2px 2px 2px #000000;
 	filter: dropshadow(color=#000000, offx=2, offy=2);
 	/*font-family: 'Asap', Arial, Helvetica, sans-serif;*/
@@ -145,6 +144,7 @@ font-family:Arial, Helvetica, sans-serif;
 	font-size: 33px;
 	font-style: normal;
 	color:#D7DE21;
+	text-transform:uppercase;
 }
 #container .header .titulo .subtitulo {
 	display: block;
@@ -163,11 +163,11 @@ font-family:Arial, Helvetica, sans-serif;
 
 #container .header .lugar {
 	position:absolute;
-	top:30px; left:620px;
+	top:30px; left:580px;
 	/*background:#666;*/
 	text-align:right;
 	color:#FFF;
-	width:300px;
+	width:340px;
 	text-shadow: 1px 1px 2px #000000;
 	filter: dropshadow(color=#000000, offx=1, offy=1);
 	letter-spacing:1px;
@@ -426,7 +426,7 @@ font-family:Arial, Helvetica, sans-serif;
 	font-size:13px; color:#358e32; font-weight:bold;
 	width:120px;
 	display:inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 }
 #container .columnaIzq .agenda .contenido .fila .descripcion {
 	background: url(img/fondoAgendaFila.jpg) left repeat-y;
@@ -809,4 +809,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5abc53', end
 
 #recaptcha_area {
 	margin:auto!important;
+}
+
+#botonMapa {
+	margin-top: 20px;
 }

@@ -2,15 +2,19 @@
 <data>
 	
 	<!-- Evento Actual -->
-	<actual>2013/jornadasDelNOAargentino</actual>
+	<actual>2014/comunidad</actual>
 	
 	<!-- Eventos Proximos -->
-	<proximo>2013/1rasJornadasDeLaAsociacionArgentinaDeRinologia</proximo>
-	<proximo>2013/SegundasJornadasAcademicas</proximo>
-	<proximo>2013/jornadasDelNOAargentino</proximo>
-	<botonProximo>2013/1rasJornadasDeLaAsociacionArgentinaDeRinologia</botonProximo>
+	<!-- <proximo>2013/conflictosLegalesEnLaPracticaDiaria</proximo> -->
+	
+	<!-- Boton Evento Proximo -->
+	<botonProximo>http://www.comunidadresidentes.com.ar/2014/inscripcionVisitadorMedico/inscripcion</botonProximo>
 
 	<!-- Eventos Realizados -->
+	<realizado>2013/CongresoNacionaldeMedicina</realizado>	
+	<realizado>2013/jornadaSAEGRE</realizado>
+	<realizado>2013/SegundasJornadasAcademicas</realizado>
+	<realizado>2013/1rasJornadasDeLaAsociacionArgentinaDeRinologia</realizado>
 	<realizado>2013/jornadaDeActualizacionEnOsteoporosis</realizado>
 	<realizado>2013/1erEncuentroNacionalDeEndocrinologosEnFormacion</realizado>
 	

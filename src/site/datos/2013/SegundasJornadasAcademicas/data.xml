@@ -19,8 +19,11 @@
 	<lugarFoto>lugar1.jpg</lugarFoto>
 	<lugarFoto>lugar2.jpg</lugarFoto>
 	<lugarFoto>lugar3.jpg</lugarFoto>
+	<lugarFoto>lugar4.jpg</lugarFoto>
+	<lugarFoto>lugar5.jpg</lugarFoto>
+	<lugarFoto>lugar6.jpg</lugarFoto>
 	
-	<inscripcion>1</inscripcion>	
+	<inscripcion>0</inscripcion>	
 	<textoEvento><![CDATA[
 		<p style="font-weight:bold">Segunda Jornada Académica del Consejo de Orientación (COrie) de Medicina</p>
 		<p style="font-weight:bold">“De la Fisiopatología al Tratamiento”</p>
@@ -150,7 +153,7 @@
 	
 	
 	<!-- Evento Realizado -->
-	<!--<fotoEvento>fotoEvento.jpg</fotoEvento>
-	<textoRealizado>Se realizó con éxito en el Salón El Greco la Jornada de Actualización en Osteoporósis</textoRealizado>-->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Salón El Greco la Segunda Jornada Académica del Consejo de Orientación (COrie) de Medicina.</textoRealizado>-->
 	
 </data>

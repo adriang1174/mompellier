@@ -230,7 +230,7 @@ function ponerEventosRealizados() {
 		if ($eventoRealizado[$i]->getElementsByTagName('diaRealizado')->item(0)) {			
 			$diaRealizado=$eventoRealizado[$i]->getElementsByTagName('diaRealizado')->item(0)->nodeValue;
 		} else {
-			$diaRealizado=$eventoRealizado[$i]->getElementsByTagName('dia')->item(0)->nodeValue;
+			$diaRealizado=substr($eventoRealizado[$i]->getElementsByTagName('dia')->item(0)->nodeValue, 0, 2);
 		}
 		
 		echo '<a class="bloque" href="'.$root.$eventosTodos->getElementsByTagName('realizado')->item($i)->nodeValue.'" target="_blank">	
