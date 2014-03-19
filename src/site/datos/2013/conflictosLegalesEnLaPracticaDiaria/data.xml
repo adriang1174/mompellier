@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Conflictos Legales en la Práctica Diaria</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>Conflictos Legales en la Práctica Diaria</subTitulo>
+	
+	<dia>27</dia>
+	<diaNombre>Miércoles</diaNombre>
+	<mes>Noviembre</mes>
+	<ano>2013</ano>
+	
+	<lugar>Aula de Capacitación Montpellier</lugar>
+	<lugarDireccion>México 3411 - C. A. Bs. As.</lugarDireccion>	
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=M%C3%A9xico+3411+-+C.+A.+Bs.+As.&amp;aq=&amp;sll=-38.452918,-63.598921&amp;sspn=55.527249,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=M%C3%A9xico+3411,+Almagro,+Buenos+Aires&amp;ll=-34.619658,-58.414082&amp;spn=0.007249,0.016512&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed</mapa>
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	
+	<inscripcion>1</inscripcion>	
+	<textoEvento><![CDATA[
+		<p>Este encuentro está dirigido a Profesionales de la salud</p>
+		<p><strong>Participar es muy simple</strong>, completá tus datos haciendo clic en el botón <strong>“INSCRIBITE”</strong>. Recibirás una confirmación.</p>
+		<p>Por motivos de seguridad deberá presentar el original de su Matrícula Profesional o Documento de Identidad previo al ingreso a nuestra Aula de Capacitación. Caso contrario no podrá acceder al evento programado.</p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Directoras" tamano="1_2" alto="50px">
+		<speaker>
+			<nombre>Dra. Cristina Bustos</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Mirta Zachin</nombre>
+		</speaker>
+	</speakers>	
+	
+	
+	<agenda titulo="Miércoles 27 de Noviembre">
+		<item>
+			<hora>17:00 a 18:45 hs</hora>
+			<actividad><![CDATA[
+				Voluntades anticipadas<br>Muerte digna<br>Ley de derechos del paciente<br>Situaciones problemáticas frecuentes en la práctica diaria<br>Planteo de casos
+			]]></actividad>
+		</item>
+		<item>
+			<hora>18:45 a 19:15 hs</hora>
+			<actividad>Café</actividad>
+		</item>
+		<item>
+			<hora>19:15 a 21:00 hs</hora>
+			<actividad><![CDATA[
+				Acción de amparo y protección de persona<br>
+				Seguros de mala praxis<br>
+				Objeción de conciencia
+			]]></actividad>
+		</item>
+	</agenda>
+	
+	
+	<!-- Evento Realizado -->
+	<!--<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Salón El Greco la Segunda Jornada Académica del Consejo de Orientación (COrie) de Medicina.</textoRealizado>-->
+	
+</data>

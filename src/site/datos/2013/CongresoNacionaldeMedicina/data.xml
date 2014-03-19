@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>VIII Congreso Nacional de Medicina y Cuidados Paliativos</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>VIII Congreso Nacional de Medicina y Cuidados Paliativos</subTitulo>
+	
+	<dia>13</dia>
+	<diaNombre>Miercoles</diaNombre>
+	<mes>Noviembre</mes>
+	<ano>2013</ano>
+	
+	<lugar>Mar del Plata.</lugar>
+	<lugarDireccion><![CDATA[Aula del Colegio de Médicos Distrito IX, Rawson 3750]]></lugarDireccion>
+
+	
+	<!--<mapa>https://maps.google.com.ar/maps?safe=off&amp;ie=UTF8&amp;q=Hotel+Garden+Park&amp;fb=1&amp;gl=ar&amp;hq=Garden+Park+Suites+%26+Eventos&amp;cid=0,0,6685131994573050436&amp;ll=-26.828297,-65.193458&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed</mapa>-->
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	<lugarFoto>lugar4.jpg</lugarFoto>
+	
+	<inscripcion>1</inscripcion>	
+	<textoEvento><![CDATA[
+		<p>Se realizó con éxito en el <strong>Colegio de Médicos Distrito IX</strong> el <strong>VIII Congreso Nacional de Medicina y Cuidados Paliativos</strong></p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Profesionales a cargo" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Lic. Psi Marina Macchi</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Jorgelina Russo</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Ai Luong</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Lic. TO Pilar Muñoz</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Natalia Eisenberg</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Lic. Psi Xavier Bilbao</nombre>
+		</speaker>
+	</speakers>
+
+	<speakers titulo="Docentes invitados" tamano="1_2" alto="50px">
+		<speaker>
+			<nombre>Dra. Marisa Pérez</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dr. Guillermo Mammana</nombre>
+		</speaker>
+	</speakers>
+	
+	
+	<agenda titulo="Viernes 18 de octubre">
+		<item>
+			<hora>15:00 h</hora>
+			<actividad>Introducción</actividad>
+			<aclaracion>Cuidados paliativos. Fundamentación de su inserción en la comunidad.</aclaracion>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Parte 1°</actividad>
+			<aclaracion>Control de síntomas. Generalidades. Desarrollo de caso clínico grupal.</aclaracion>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Break</actividad>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Parte 2°</actividad>
+			<aclaracion>Plenaria de grupos de trabajo. Estrategias para manejo del dolor y requerimiento de opioides.</aclaracion>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Break</actividad>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Parte 3°</actividad>
+			<aclaracion>La comunicación como ciencia y arte.</aclaracion>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Break</actividad>
+		</item>
+		<item>
+			<hora></hora>
+			<actividad>Parte 4°</actividad>
+			<aclaracion>Cómo comunicar malas noticias.</aclaracion>
+		</item>
+		<item>
+			<hora>19:00 h</hora>
+			<actividad>Conclusión y cierre</actividad>
+		</item>
+		
+	</agenda>
+	
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Colegio de Médicos Distrito IX el VIII Congreso Nacional de Medicina y Cuidados Paliativos</textoRealizado>
+	
+</data>

@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Comunidad Residentes</title>
+<link href="../estilos.css" rel="stylesheet" type="text/css" />
+
+<!-- Jquery -->
+<script type="text/javascript" src="../scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.color.js"></script>
+<script type="text/javascript" src="../scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../scripts/jquery.easing.compatibility.js"></script>
+
+<!-- jAlert -->
+<script src="../jquery.alerts-1.1/jquery.alerts.js"></script>
+<link href="../jquery.alerts-1.1/jquery.alerts.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+function enviarForm2() {
+	$('#formInscribise').submit();
+}
+
+function enviarForm() {
+	$.post("send/enviar.php", {
+		sendNombre: $("#nombre").val() ,
+		sendApellido: $("#apellido").val() ,
+		sendTelefono: $("#telefono").val() ,
+		sendEmail: $("#email").val() ,
+		sendMatriculaNac: $("#matriculaNac").val() ,
+		sendMatriculaProv: $("#matriculaProv").val() ,
+		sendCondicion: $("#condicion").val() ,
+		sendEspecialidad: $("#especialidad").val() ,
+		sendInstitucion: $("#institucion").val() ,
+		sendLocalidad: $("#localidad").val() ,
+		sendProvincia: $("#provincia").val() ,
+	}, function(data) {
+		if (data!="NOK") {
+			jAlert('<strong>El Formulario ha sido enviado correctamente.</strong>', 'Muchas gracias');			
+			$("#nombre").val("");
+			$("#apellido").val("");
+			$("#telefono").val("");
+			$("#email").val("");
+			$("#matriculaNac").val("");
+			$("#matriculaProv").val("");
+			$("#condicion").val("");
+			$("#especialidad").val("");
+			$("#institucion").val("");
+			$("#localidad").val("");
+			$("#provincia").val("");
+		} else {
+			jAlert('Ha ocurrido un error al enviar el Formulario. \nIntente en otro momento. Disculpe las molestias', 'Error');			
+		}
+	})
+}
+
+$(document).ready(function () {
+
+	$("#botonInscribirse").click(function(){
+		var errtxt = "";
+		if(	$("#nombre").val() == '') {
+			errtxt += 'Debe ingresar Nombre.\n';
+		}
+		if ($("#apellido").val() == '') {
+			errtxt += 'Debe ingresar Apellido.\n';
+		}
+		if($("#telefono").val() == '') {
+			errtxt += 'Debe ingresar Telefono.\n';
+		}
+		if($("#dni").val() == '') {
+			errtxt += 'Debe ingresar DNI.\n';
+		}
+		if($("#email").val() == '') {
+			errtxt += 'Debe ingresar Email.\n';
+		}
+		if($("#institucion").val() == '') {
+			errtxt += 'Debe ingresar Institución.\n';
+		}
+		if($("#localidad").val() == '') {
+			errtxt += 'Debe ingresar Localidad.\n';
+		}
+		if($("#provincia").val() == '') {
+			errtxt += 'Debe ingresar Provincia.\n';
+		}
+		if (errtxt != '') {
+			jAlert("<strong>"+errtxt+"</strong>", "Alerta");
+		}
+		else {
+			enviarForm();
+		}
+	});
+	
+});
+
+</script>
+
+</head>
+
+<body style="background:none; background-color:#666">
+
+<div style="margin:auto; width:800px; background:#FFFFFF url(img/header.jpg) no-repeat; padding-top:230px">
+	<div style="background:#1a1b1f; width:580px; margin:auto; padding:18px; text-align:center; color:#999; font-size:14px; -webkit-border-radius: 10px; border-radius: 10px;">
+    	Por favor deje sus datos para ingresar a nuestra lista de contactos.<br />Nosotros lo mantendremos actualizado en cuanto a novedades y eventos.
+    </div>
+    
+    <!-- Formulario de Inscripcion -->
+    <div id="container" style="background:none; border:none; width:720px; padding:40px; -webkit-box-shadow:none; box-shadow:none; min-height:0; ">
+        <div class="columnaIzq" style="float:none">
+            <div class="bloque formulario" style="margin-top:0px;">
+                <form action="send/enviar.php" method="post" enctype="multipart/form-data" name="formInscribise" id="formInscribise">
+                <p>
+                    <span>Nombre</span><input id="nombre" name="nombre" type="text" class="campo" />
+                    <span>Apellido</span><input id="apellido" name="apellido" type="text" class="campo" />
+                </p>
+                <p>
+                    <span>DNI</span><input id="dni" name="dni" type="text" class="campo" />
+                    <span>Teléfono</span><input id="telefono" name="telefono" type="text" class="campo" />
+                </p>
+                <p>
+                    <span>E-mail</span><input id="email" name="email" type="text" class="campo" />
+                    <span>Matricula Nº - Nac</span><input id="matriculaNac" name="matriculaNac" type="text" class="campo" />
+                </p>
+                <p>
+                    <span>Matricula Nº - Prov</span><input id="matriculaProv" name="matriculaProv" type="text" class="campo" />
+                    <span>Condición</span>
+                    <select id="condicion" name="condicion" class="campo" style="width:238px">
+						<option value="">Seleccione...</option>
+                        <option value="Becario">Becario</option>
+                        <option value="Concurrente">Concurrente</option>
+                        <option value="Concurrente 1 año">Concurrente 1 año</option>
+                        <option value="Concurrente 2 año">Concurrente 2 año</option>
+                        <option value="Concurrente 3 año">Concurrente 3 año</option>
+                        <option value="Concurrente 4 año">Concurrente 4 año</option>
+                        <option value="Concurrente 5 año">Concurrente 5 año</option>
+                        <option value="Contratado">Contratado</option>
+                        <option value="Contratado">Contratado</option>
+                        <option value="Coordinador de Residentes">Coordinador de Residentes</option>
+                        <option value="Coordinador de Residentes">Coordinador de Residentes</option>
+                        <option value="Docente">Docente</option>
+                        <option value="Especialista">Especialista</option>
+                        <option value="Especialista">Especialista</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Estudiante 4 año">Estudiante 4 año</option>
+                        <option value="Estudiante 5 año">Estudiante 5 año</option>
+                        <option value="Farmacia">Farmacia</option>
+                        <option value="IAR">IAR</option>
+                        <option value="Instructor">Instructor</option>
+                        <option value="Instructor">Instructor</option>
+                        <option value="Instructor Residente">Instructor Residente</option>
+                        <option value="Jefa Dpto.Clin. Pediatrica">Jefa Dpto.Clin. Pediatrica</option>
+                        <option value="Jefa Dpto.Clin. Pediatrica">Jefa Dpto.Clin. Pediatrica</option>
+                        <option value="Jefe de Residentes">Jefe de Residentes</option>
+                        <option value="Jefe de sala">Jefe de sala</option>
+                        <option value="Jefe de sala">Jefe de sala</option>
+                        <option value="Jefe Encar.Guardia Central">Jefe Encar.Guardia Central</option>
+                        <option value="Jefe Instructor Residente">Jefe Instructor Residente</option>
+                        <option value="Licenciado">Licenciado</option>
+                        <option value="M. Planta -Jefe de Guardia">M. Planta -Jefe de Guardia</option>
+                        <option value="Medico">Medico</option>
+                        <option value="No Informa">No Informa</option>
+                        <option value="Residente">Residente</option>
+                        <option value="Residente 1 año">Residente 1 año</option>
+                        <option value="Residente 2 año">Residente 2 año</option>
+                        <option value="Residente 3 año">Residente 3 año</option>
+                        <option value="Residente 4 año">Residente 4 año</option>
+                        <option value="Residente Cirugia Pediatrica">Residente Cirugia Pediatrica</option>
+                        <option value="Residente de Diabetes">Residente de Diabetes</option>
+                        <option value="Residente de Pediatria">Residente de Pediatria</option>
+                    </select>
+                </p>
+                <p>
+                    <span>Especialidad</span>
+                    <select id="especialidad" name="especialidad" class="campo" style="width:238px">
+                    	<option value="">Seleccione...</option>
+                        <option value="Alergia e Inmunologia">Alergia e Inmunologia</option>
+                        <option value="Asistente de Quirofano">Asistente de Quirofano</option>
+                        <option value="Biólogo">Biólogo</option>
+                        <option value="Bioquimica">Bioquimica</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Cirugia">Cirugia</option>
+                        <option value="Cirugia pediatrica">Cirugia pediatrica</option>
+                        <option value="Cirugia Plastica">Cirugia Plastica</option>
+                        <option value="Clinica Medica">Clinica Medica</option>
+                        <option value="Clínica Pediatrica">Clínica Pediatrica</option>
+                        <option value="CLM-Cardiologia">CLM-Cardiologia</option>
+                        <option value="CLM-Diabetes">CLM-Diabetes</option>
+                        <option value="CLM-Terapista">CLM-Terapista</option>
+                        <option value="Dermatologia">Dermatologia</option>
+                        <option value="Diabetes">Diabetes</option>
+                        <option value="Diagnostico por imagenes">Diagnostico por imagenes</option>
+                        <option value="Educaciòn Fìsica">Educaciòn Fìsica</option>
+                        <option value="Endocrinologia">Endocrinologia</option>
+                        <option value="Enfermeria">Enfermeria</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Farmacia">Farmacia</option>
+                        <option value="Fisiatría">Fisiatría</option>
+                        <option value="Gastroenterologia">Gastroenterologia</option>
+                        <option value="Generalista">Generalista</option>
+                        <option value="Geriatria">Geriatria</option>
+                        <option value="Gerontologia">Gerontologia</option>
+                        <option value="Gimnasia Terapéutica">Gimnasia Terapéutica</option>
+                        <option value="Ginecologia">Ginecologia</option>
+                        <option value="IAR">IAR</option>
+                        <option value="Infectologia">Infectologia</option>
+                        <option value="Kinesiologia">Kinesiologia</option>
+                        <option value="Lic. Bioimagenes">Lic. Bioimagenes</option>
+                        <option value="Lic. en Obstetricia">Lic. en Obstetricia</option>
+                        <option value="Lic. Nutriciòn">Lic. Nutriciòn</option>
+                        <option value="Med.General">Med.General</option>
+                        <option value="Medicina del Deporte">Medicina del Deporte</option>
+                        <option value="Medicina Familiar">Medicina Familiar</option>
+                        <option value="Medicina General">Medicina General</option>
+                        <option value="Medicina Interna">Medicina Interna</option>
+                        <option value="Medicina Laboral">Medicina Laboral</option>
+                        <option value="Medicina Legal">Medicina Legal</option>
+                        <option value="Medico Generalista">Medico Generalista</option>
+                        <option value="Nefrologia">Nefrologia</option>
+                        <option value="Neonatologia">Neonatologia</option>
+                        <option value="Neurocirugia">Neurocirugia</option>
+                        <option value="Neurologia">Neurologia</option>
+                        <option value="NO CORRESPONDE">NO CORRESPONDE</option>
+                        <option value="No Informa">No Informa</option>
+                        <option value="Nutricion">Nutricion</option>
+                        <option value="Obstetricia">Obstetricia</option>
+                        <option value="Oftalmologia">Oftalmologia</option>
+                        <option value="Oncologia">Oncologia</option>
+                        <option value="Ortopedia">Ortopedia</option>
+                        <option value="Ortopedia y Traumatologia">Ortopedia y Traumatologia</option>
+                        <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                        <option value="Patología">Patología</option>
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Psiquiatria">Psiquiatria</option>
+                        <option value="Radiologa">Radiologa</option>
+                        <option value="Residente">Residente</option>
+                        <option value="Reumatologia">Reumatologia</option>
+                        <option value="Terapia Intensiva">Terapia Intensiva</option>
+                        <option value="Tocoginecologia">Tocoginecologia</option>
+                        <option value="Traumatologia">Traumatologia</option>
+                    </select>
+                    <span>Institución</span>
+                    <select id="institucion" name="institucion" class="campo" style="width:238px">
+                    	<option value="">Seleccione...</option>
+                        <option value="Aeronaútico Central">Aeronaútico Central</option>
+                        <option value="Alvarez">Alvarez</option>
+                        <option value="Argerich">Argerich</option>
+                        <option value="Asermed">Asermed</option>
+                        <option value="ASMEL">ASMEL</option>
+                        <option value="Barceló">Barceló</option>
+                        <option value="Bernardino Rivadavia">Bernardino Rivadavia</option>
+                        <option value="Bertres de San Fernando">Bertres de San Fernando</option>
+                        <option value="Borda">Borda</option>
+                        <option value="CAPS Nº  7 Dr. Eizaguirre - Villa Celina">CAPS Nº  7 Dr. Eizaguirre - Villa Celina </option>
+                        <option value="Cemic">Cemic</option>
+                        <option value="César Milstein">César Milstein</option>
+                        <option value="Clinica del niño">Clinica del niño</option>
+                        <option value="Clìnica Solìs">Clìnica Solìs</option>
+                        <option value="Clínicas">Clínicas</option>
+                        <option value="Durand">Durand</option>
+                        <option value="Elizalde">Elizalde</option>
+                        <option value="Emergencias">Emergencias</option>
+                        <option value="Español">Español</option>
+                        <option value="Español - Universidad Maimonides">Español - Universidad Maimonides</option>
+                        <option value="Español Buenos Aires">Español Buenos Aires</option>
+                        <option value="Estevez de Temperley">Estevez de Temperley</option>
+                        <option value="Evita Pueblo de Berazategui">Evita Pueblo de Berazategui</option>
+                        <option value="Ezeiza">Ezeiza</option>
+                        <option value="Fernandez">Fernandez</option>
+                        <option value="Fiorito de Avellaneda">Fiorito de Avellaneda</option>
+                        <option value="Galeno">Galeno</option>
+                        <option value="Galeno">Galeno</option>
+                        <option value="Gandulfo">Gandulfo</option>
+                        <option value="Garrahan">Garrahan</option>
+                        <option value="Gastroenterologia Dr. Bonorino Udaondo">Gastroenterologia Dr. Bonorino Udaondo</option>
+                        <option value="GCBA">GCBA</option>
+                        <option value="Gral. De Agudos T. Alvarez">Gral. De Agudos T. Alvarez</option>
+                        <option value="Gutierrez">Gutierrez</option>
+                        <option value="Htal Municipal de Chascomus">Htal Municipal de Chascomus</option>
+                        <option value="Htal. Belgrano">Htal. Belgrano</option>
+                        <option value="Htal. Bocalandro">Htal. Bocalandro</option>
+                        <option value="Htal. Houssay V. Lopez">Htal. Houssay V. Lopez</option>
+                        <option value="Itaiz">Itaiz</option>
+                        <option value="Italiano">Italiano</option>
+                        <option value="Julio Mendez">Julio Mendez</option>
+                        <option value="Lacarde - San Miguel">Lacarde - San Miguel</option>
+                        <option value="Lucio Melendez de Adrogué">Lucio Melendez de Adrogué</option>
+                        <option value="Marie Curie">Marie Curie</option>
+                        <option value="Materno Infantil - San isidro">Materno Infantil - San isidro</option>
+                        <option value="Medicus">Medicus</option>
+                        <option value="Metrogas">Metrogas</option>
+                        <option value="Militar Central">Militar Central</option>
+                        <option value="Morón">Morón</option>
+                        <option value="Municipal Rivadavia">Municipal Rivadavia</option>
+                        <option value="Muñiz">Muñiz</option>
+                        <option value="Nacional Prof. Alejandro Posadas">Nacional Prof. Alejandro Posadas</option>
+                        <option value="Narciso Lopez de Lanus">Narciso Lopez de Lanus</option>
+                        <option value="Naval">Naval</option>
+                        <option value="Niños de la Sma. Trinidad">Niños de la Sma. Trinidad</option>
+                        <option value="NO CORRESPONDE">NO CORRESPONDE</option>
+                        <option value="No Informa">No Informa</option>
+                        <option value="Osecac Flores">Osecac Flores</option>
+                        <option value="P. Peron de Avellaneda">P. Peron de Avellaneda</option>
+                        <option value="Parmenio T. Piñero">Parmenio T. Piñero</option>
+                        <option value="Paroissien">Paroissien</option>
+                        <option value="Particular">Particular</option>
+                        <option value="Pediatrico Malvinas Argentinas">Pediatrico Malvinas Argentinas</option>
+                        <option value="Penna">Penna</option>
+                        <option value="Petrona V. De Cordero">Petrona V. De Cordero</option>
+                        <option value="Piñero">Piñero</option>
+                        <option value="Pirovano">Pirovano</option>
+                        <option value="Privado">Privado</option>
+                        <option value="Provincial Zenon Videla">Provincial Zenon Videla</option>
+                        <option value="Ramos Mejìa">Ramos Mejìa</option>
+                        <option value="Regional Ramon Carrillo - Sgo del Estero">Regional Ramon Carrillo - Sgo del Estero</option>
+                        <option value="Rivadavia">Rivadavia</option>
+                        <option value="Rocca">Rocca</option>
+                        <option value="Roffo">Roffo</option>
+                        <option value="Sala Angel Bo. Hurlingham">Sala Angel Bo. Hurlingham</option>
+                        <option value="SAME">SAME</option>
+                        <option value="Sanatorio Sagrado Corazòn / OSECAC">Sanatorio Sagrado Corazòn / OSECAC</option>
+                        <option value="Santa Marina (Montegrande)">Santa Marina (Montegrande)</option>
+                        <option value="Santojani">Santojani</option>
+                        <option value="Santojanni">Santojanni</option>
+                        <option value="Santoyanni">Santoyanni</option>
+                        <option value="Tornú">Tornú</option>
+                        <option value="UBA">UBA</option>
+                        <option value="Universidad Abierta Interamericana">Universidad Abierta Interamericana</option>
+                        <option value="USAL">USAL</option>
+                        <option value="Velez Sarsfield">Velez Sarsfield</option>
+                        <option value="Zubizarreta">Zubizarreta</option>
+                    </select>
+                </p>
+                <p>
+                    <span>Localidad</span><input id="localidad" name="localidad" type="text" class="campo" />
+                    <span>Provincia</span><input id="provincia" name="provincia" type="text" class="campo" />
+                    <input id="nombreEvento" name="nombreEvento" type="hidden" value="<?php nombreEvento() ?>" />
+                    <input id="idEvento" name="idEvento" type="hidden" value="<?= $eventosTodos->getElementsByTagName('actual')->item(0)->nodeValue ?>" />
+                </p>
+                
+                <p style="text-align:right; padding:30px 23px; border-top: solid 1px #cccccc; margin-top:20px;"><a class="botonGenerico" style="padding:13px 22px" id="botonInscribirse">SUSCRIBIRSE ></a></p>
+                </form>
+            </div>
+        </div>
+	</div>
+    
+    <div style="background:#1a1b1f; text-align:center; padding:30px;">
+		<a href="http://www.comunidadresidentes.com.ar" target="_blank"><img src="img/web.gif" width="428" height="35" /></a>
+        <a href="mailto:contacto@comunidadresidentes.com.ar?subject=Consulta desde comunidadresidentes.com.ar"><img src="img/mail.gif" width="324" height="34" /></a>
+        <div style="border-bottom:#666 1px solid; height:1px; margin:auto; margin-bottom:20px; padding-top:20px; width:600px"></div>
+        <a href="https://www.facebook.com/ComunidadResidentesArgentina" target="_blank"><img src="img/logoFacebook.gif" width="370" height="50" /></a>
+        <a href="https://twitter.com/ResidentesArg" target="_blank"><img src="img/logoTwitter.gif" width="176" height="50" /></a>
+    </div>
+    
+    
+</div>
+
+</body>
+</html>

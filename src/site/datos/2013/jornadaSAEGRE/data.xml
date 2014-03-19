@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>V Jornada de SAEGRE para Residentes</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo>V Jornada de SAEGRE para Residentes</subTitulo>
+	
+	<dia>8</dia>
+	<diaNombre>Viernes</diaNombre>
+	<mes>Noviembre</mes>
+	<ano>2013</ano>
+	
+	<lugar>Aula de Capacitación Montpellier</lugar>
+	<lugarDireccion>México 3411 - C. A. Bs. As.</lugarDireccion>	
+	
+	<mapa>https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=M%C3%A9xico+3411+-+C.+A.+Bs.+As.&amp;aq=&amp;sll=-38.452918,-63.598921&amp;sspn=55.527249,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=M%C3%A9xico+3411,+Almagro,+Buenos+Aires&amp;ll=-34.619658,-58.414082&amp;spn=0.007249,0.016512&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed</mapa>
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	<lugarFoto>lugar4.jpg</lugarFoto>
+	
+	<inscripcion>0</inscripcion>	
+	<textoEvento><![CDATA[
+		<p>Se realizó con éxito en el <strong>Aula de Capacitación Montpellier</strong> la <strong>V Jornada de SAEGRE para Residentes</strong></p>
+	]]></textoEvento>
+	
+	
+	<speakers titulo="Directores" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Dra. Marisa Geller</nombre>
+		</speaker>
+		<speaker>
+			<nombre>Dra. Martina Carro</nombre>
+		</speaker>
+	</speakers>	
+	
+	<speakers titulo="Coordinadora" tamano="1_3" alto="50px">
+		<speaker>
+			<nombre>Dra. Constanza Franco</nombre>
+		</speaker>
+	</speakers>	
+	
+	
+	<agenda titulo="Viernes 8 de Noviembre">
+		<item>
+			<hora>13:30 a 14:15 hs</hora>
+			<actividad>Inscripción - Lunch</actividad>
+		</item>
+		<item>
+			<hora>14:15 a 15:00 hs</hora>
+			<actividad>Alteraciones del ciclo</actividad>
+			<aclaracion><![CDATA[- Clasificación de la anovulación<br>- Tratamiento de la anovulación<br>- Casos clínicos (2)<br>- Caso Clínico (1)]]></aclaracion>
+		</item>
+		<item>
+			<hora>15:00 a 16:00 hs</hora>
+			<actividad>Fertilidad</actividad>
+			<aclaracion><![CDATA[- Estudio de la pareja infértil<br>- Esquemas de estimulación para baja complejidad. Inseminación intrauterina<br>- Tratamientos de alta complejidad. Nuevas técnicas<br>- Casos clínicos (2)]]></aclaracion>
+		</item>
+		<item>
+			<hora>16:00 a 16:30 hs</hora>
+			<actividad>Café</actividad>
+		</item>
+		<item>
+			<hora>16:30 a 17:30 hs</hora>
+			<actividad>SOP</actividad>
+			<aclaracion><![CDATA[- Diagnóstico<br>- Tratamiento del SOP sin deseo de fertilidad<br>- Tratamiento del SOP con deseo de fertilidad<br>- Casos clínicos (2)]]></aclaracion>
+		</item>
+		<item>
+			<hora>17:30 a 18:30 hs</hora>
+			<actividad>Anticoncepción</actividad>
+			<aclaracion><![CDATA[- Nuevos métodos anticonceptivos<br>- Nuevos anticonceptivos orales<br>- ACO en situaciones especiales: casos clínicos (2)<br>- Casos clínicos (2)]]></aclaracion>
+		</item>
+	</agenda>
+	
+	
+	<!-- Evento Realizado -->
+	<fotoEvento>fotoEvento.jpg</fotoEvento>
+	<textoRealizado>Se realizó con éxito en el Aula de Capacitación Montpellier la V Jornada de SAEGRE para Residentes</textoRealizado>
+	
+</data>

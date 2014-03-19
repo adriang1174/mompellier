@@ -557,16 +557,6 @@ function inscripcionAbierta() {
 							$sql = "insert into participantescursos (idParticipante,idCurso,asistio)
 							values({$idParticipante},'{$idCurso}','0')";
 							$res = mysqli_query($link,$sql);
-							
-							$descripcionCurso = $doc->getElementsByTagName('tituloHTML')->item(0)->nodeValue;
-							$fechaCurso = $doc->getElementsByTagName('dia')->item(0)->nodeValue." de ".$doc->getElementsByTagName('mes')->item(0)->nodeValue" de ".$doc->getElementsByTagName('ano')->item(0)->nodeValue;
-							$lugarCurso = $doc->getElementsByTagName('lugar')->item(0)->nodeValue." - ".$doc->getElementsByTagName('lugarDireccion')->item(0)->nodeValue;
-							$sql = "INSERT IGNORE INTO cursos
-											SET id = '{$idCurso}',
-											descripcion = '".utf8_decode($descripcionCurso)."',
-											fechaInicio = '{$fechaCurso}',
-											lugar = '".utf8_decode($lugarCurso)."'";
-							$res = mysqli_query($link,$sql);
 							// mandamos el mail
 							require("send/class.phpmailer.php");
 							$mail = new PHPMailer();

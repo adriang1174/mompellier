@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	
+	<tituloHTML>Comunidad Residentes - Quimica Montpellier</tituloHTML>
+
+	<nombreEvento><![CDATA[ Encuentro Académico de <strong>Residencias Medicas</strong>]]></nombreEvento>
+	<subTitulo><![CDATA[
+		Suscribite ahora para enterarte antes sobre próximos eventos y agenda de actividades <br><span style="font-size:9px">* Suscripción y actividades sin cargo!</span>
+	]]></subTitulo>
+	
+	
+	<lugarFoto>lugar1.jpg</lugarFoto>
+	<lugarFoto>lugar2.jpg</lugarFoto>
+	<lugarFoto>lugar3.jpg</lugarFoto>
+	<lugarFoto>lugar4.jpg</lugarFoto>
+	<lugarFoto>lugar5.jpg</lugarFoto>
+	<lugarFoto>lugar6.jpg</lugarFoto>
+	
+	<inscripcion>1</inscripcion>	
+	<textoEvento><![CDATA[
+		<p style="font-weight:bold">Más de 6.000 estudiantes y residentes ya son parte de nuestra comunidad!</p>
+		<p>Te mostramos algunas fotos de nuestros eventos a los que podés acceder de manera gratuita con solo registrarte.</p>
+		<p>La comunidad la hacemos entre todos, no podés faltar!</p>
+	]]></textoEvento>
+	
+	
+	<!-- Evento Realizado -->
+	<fotoEvento></fotoEvento>
+	<textoRealizado></textoRealizado>-->
+	
+</data>
