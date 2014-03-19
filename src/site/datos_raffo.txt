@@ -1,0 +1,38 @@
+ffff5a
+67e16a
+
+eccb4a
+489d4a
+
+ffffc1
+c4fdc5
+
+
+279929
+6544
+
+Raffo
+
+GERENCIA1
+DORREGO898
+
+int 101
+
+clave aleatoria para no pedir doc
+administrable
+
+Issue
+No se ve
+663570
+16221496
+
+Se ve
+662702
+2594314
+
+
+154467082
+
+A663135.TXT.tw_temp_
+
+select substring(archivo,1,10),archivo
